@@ -1,0 +1,2495 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* font-family: 'Tiro Devanagari Hindi', serif; */
+}
+
+/* -------navbar menu-------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px 5px 20px;
+    align-items: center;
+    background: #E4DED4;
+    height: 8vh;
+    z-index: 1;
+    top: 0;
+    position: sticky;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.toggle_btn {
+    color: black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* margin-right: 10px; */
+    display: none;
+}
+
+/* ------dropdown menu burger--------- */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 9vh;
+    position: fixed;
+    z-index: 10;
+    height: 0px;
+    left: 71%;
+    width: 29%;
+    background: #ebe9e5;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 100%;
+}
+
+.drop-links {
+    margin-top: 1.5rem;
+}
+
+.dropdown_menu a {
+    padding: 10px 0px 10px 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #28231E;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+/* ----------------------------------- */
+.logo>a>img {
+    width: 14rem;
+}
+
+.links>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.links>ul>li {
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid #E4DED4;
+    border-right: 1px solid #28231E;
+    padding: 5px 20px 5px 20px;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.2s;
+}
+
+.links>ul>li:nth-child(7) {
+    border-right: none;
+}
+
+.point {
+    padding-left: 5px;
+    font-size: 1.1rem;
+}
+
+.links>ul>li>a {
+    text-decoration: none;
+    color: #28231E;
+    padding-bottom: 22px;
+    transition: 0.2s;
+}
+
+.links ul li:hover>a {
+    border-bottom: 3px solid red;
+    color: red;
+}
+
+/* ---------------dropdown menu------------------ */
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu ul {
+    margin: 15px 0px 10px 0px;
+}
+
+.dropdown-menu ul a li {
+    color: #28231E;
+}
+
+.dropdown-menu ul a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.links ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 10%;
+    top: 159%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 1;
+}
+
+.links ul li:hover .dropdown-menu ul {
+    display: block;
+    list-style-type: none;
+}
+
+.links ul li:hover .dropdown-menu ul li {
+    width: 250px;
+    padding: 10px 0px 10px 20px;
+}
+
+.links ul li:hover .dropdown-menu ul li a {
+    border-bottom: none;
+    color: #28231E;
+}
+
+.dropdown-menu ul li:hover {
+    background: #ebe9e5;
+    color: none;
+}
+
+/* ------------hero section----------- */
+.hero {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7495330896030288) 0%, rgba(0, 0, 0, 0.752334210051208) 50%, rgba(0, 0, 0, 0.7747431736366421) 100%, rgba(0, 0, 0, 0.752334210051208) 100%), url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.herotext {
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.herotext p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* --------------------content of home---------------- */
+.sec-headeing {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sec-img {
+    width: 100%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* ------------what is yoga----------- */
+.what {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.what p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.what .p2 {
+    padding-top: 30px;
+}
+
+/* -----------why wee need yoga--------- */
+.yoganeed {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+    padding-top: 30px;
+}
+
+.yoganeed ul {
+    font-size: 1.15rem;
+    list-style-type: none;
+}
+
+.yoganeed img {
+    margin: 20px 0px 20px 0px;
+}
+
+.yoganeed ul li {
+    margin-top: 15px;
+}
+
+/* ------benefit of yoga------ */
+.benefit {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+    padding-top: 30px;
+}
+
+.benefit>div {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.benefit>div>p {
+    margin-bottom: 20px;
+}
+
+.benefit>div>ul {
+    margin: 20px 0px 20px 50px;
+}
+
+.benefit>div>ul>li {
+    margin-top: 10px;
+}
+
+.benefit-div2 {
+    margin-top: 40px;
+}
+
+/* -------proper way to do yoga--------- */
+.proper {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+    padding-top: 30px;
+    font-size: 1.15rem;
+}
+
+.proper>div>p {
+    margin-bottom: 20px;
+}
+
+.proper>div>.p2 {
+    margin-top: 40px;
+}
+
+.proper>div>ol {
+    margin: 0px 0px 5px 50px;
+    font-weight: 600;
+}
+
+.proper>div>ol>li {
+    margin-top: 10px;
+}
+
+.proper>div>span {
+    display: block;
+    text-align: center;
+}
+
+/* --------dont's while yoga------ */
+.donts {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+    padding-top: 30px;
+    font-size: 1.15rem;
+}
+
+.donts p {
+    margin-bottom: 20px;
+}
+
+.donts ol {
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.donts ol li {
+    margin-top: 15px;
+}
+
+/* -----------history of yoga------- */
+.history {
+    width: 55%;
+    margin: auto;
+    margin-top: 5vh;
+    padding-top: 30px;
+    font-size: 1.15rem;
+}
+
+.history>.p1 {
+    margin-bottom: 20px;
+}
+
+.history>.p2 {
+    margin: 30px 0px 20px 0px;
+}
+
+/* --------------footer-------- */
+.footer {
+    background: #28231E;
+    color: #E4DED4;
+    margin-top: 10vh;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+}
+
+.contect {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 50px 0px 20px 0px;
+}
+
+.address {
+    padding: 20px 150px 20px 0px;
+    border-right: 2px solid #E4DED4;
+}
+
+.number {
+    padding: 0px 150px 0px 0px;
+    border-right: 2px solid #E4DED4;
+}
+
+.socialmedia>.logo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.copywrite {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+    border-top: 2px solid #E4DED4;
+}
+
+/* -------------------------------------------beginer page------------------------------------------- */
+.beg-hero {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7495330896030288) 0%, rgba(0, 0, 0, 0.752334210051208) 50%, rgba(0, 0, 0, 0.7747431736366421) 100%, rgba(0, 0, 0, 0.752334210051208) 100%), url(images/beginer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.beg-main {
+    width: 100%;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+.card {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 70px;
+    border-radius: 20px;
+    border: 2px solid #28231E;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card img {
+    width: 350px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.card .beg-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 20px 20px 30px;
+}
+
+.card .beg-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card .beg-text p {
+    font-size: 1rem;
+}
+
+.card .beg-text a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background: red;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 35%;
+    align-items: flex-end;
+}
+
+/* ---------------------how to start practice page-------------- */
+.practice-heading {
+    background: #eaeaea;
+    padding: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.prac-heading-text {
+    width: 50%;
+    margin: auto;
+}
+
+.prac-heading-text>h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.prac-heading-text>p {
+    text-align: center;
+    font-size: 1.1rem;
+    width: 80%;
+    margin: auto;
+}
+
+.practice-heading>img {
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.practice-text {
+    margin-top: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.practice-text>p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.practice-text>h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+/* ------------------starting pose page---------------- */
+.startpose-content {
+    width: 70%;
+    margin: auto;
+}
+
+.startpose-content>.p1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.start-poses>h3 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.content {
+    display: flex;
+}
+
+.content>img {
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.content>ol {
+    margin-left: 50px;
+    font-size: 1.1rem;
+}
+
+.content>ol>li {
+    margin-bottom: 10px;
+}
+
+/* -----------------at home page--------------- */
+.athome {
+    width: 70%;
+    margin: auto;
+}
+
+.athome>h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.athome>p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* --------------------accessories page--------------------- */
+.accesories {
+    width: 70%;
+    margin: auto;
+}
+
+.accessories-card>h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+
+.accessories-content>.text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.accessories-content>img {
+    width: 600px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* ---------------------cloths page------------- */
+.cloths {
+    width: 70%;
+    margin: auto;
+}
+
+.cloths>h2 {
+    margin-top: 40px;
+    font-size: 1.7rem;
+}
+
+.cloths>p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* ---------------------poses page-------------- */
+.pose-hero {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7495330896030288) 0%, rgba(0, 0, 0, 0.752334210051208) 50%, rgba(0, 0, 0, 0.7747431736366421) 100%, rgba(0, 0, 0, 0.752334210051208) 100%), url(images/poses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.pose-main {
+    width: 90%;
+    margin: auto;
+}
+
+.pose-main h1 {
+    font-size: 1.7rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.pose-category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container {
+    width: auto;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 50px;
+}
+
+.container>a {
+    text-decoration: none;
+}
+
+.pose-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.container:hover .pose-card {
+    transform: translateY(-30px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.pose-card>img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+}
+
+.pose-card>h2 {
+    font-size: 1.3rem;
+    padding: 10px;
+    color: #E4DED4;
+    background: #28231E;
+    clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------poses inner pages------------- */
+.inpose-heading {
+    padding-top: 30px;
+    background: #ebe9e5;
+    text-align: center;
+}
+
+.inpose-heading>h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.inpose-heading>img {
+    width: 700px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.inpose-text {
+    width: 70%;
+    margin: auto;
+}
+
+.inpose-text>h2 {
+    margin-top: 30px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.inpose-text>ol {
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.inpose-text>ol>li {
+    margin-bottom: 15px;
+}
+
+.inpose-text>p {
+    font-size: 1.2rem;
+}
+
+/* ----------------suryanamaskar----------------- */
+.suryanamaskar>h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    background: #eaeaea;
+}
+
+.surya-positions {
+    margin-top: 20px;
+}
+
+.position-content {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.position-content>h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.position-content>img {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.position-content>p {
+    font-size: 1.2rem;
+}
+
+.surya-positions>h2 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+    width: 60%;
+    margin: auto;
+}
+
+.surya-positions>p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* -------------------everyone page--------------------- */
+.everyone-hero {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7495330896030288) 0%, rgba(0, 0, 0, 0.752334210051208) 50%, rgba(0, 0, 0, 0.7747431736366421) 100%, rgba(0, 0, 0, 0.752334210051208) 100%), url(images/everyone.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+/* ---------------------------elders asan page------------------------- */
+.elders-main>h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.7rem;
+    background: #eaeaea;
+}
+
+.elders-main>p {
+    padding: 0px 120px 30px 120px;
+    text-align: center;
+    background: #eaeaea;
+}
+
+.elders-asan {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.elders-asan>h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.elders-asan>img {
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.elders-asan>h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.elders-asan>ol {
+    margin-left: 25px;
+}
+
+.elders-asan>ol>li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.elders-asan>.elder-benefit {
+    font-size: 1.1rem;
+}
+
+/* -----------------------meditation page---------------- */
+.med-hero {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7495330896030288) 0%, rgba(0, 0, 0, 0.752334210051208) 50%, rgba(0, 0, 0, 0.7747431736366421) 100%, rgba(0, 0, 0, 0.752334210051208) 100%), url(images/meditation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+/* ----------------------ashtang page-------------- */
+.position-content>ul{
+    margin-top: 15px;
+    margin-left: 35px;
+    font-size: 1.1rem;
+}
+.position-content>ul>li{
+    margin-bottom: 10px;
+}
+
+/* ----------------type of yog page---------------------- */
+.position-content>h3{
+    margin-top: 10px;
+}
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+@media (min-width: 1281px) {
+    /* code in this block will be applied only if device width>1281 */
+}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* code in this block will be applied only if device width>1025 and <1280 */
+    .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .dropdown_menu a {
+        margin: 10px 15px 10px 10px;
+        border-radius: 3px;
+        font-size: 1.1rem;
+        border: 1px solid #28231e;
+    }
+
+    /* ----------hero section---------- */
+    .hero {
+        height: 55vh;
+    }
+
+    .herotext {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+
+    .herotext p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+    }
+
+    /* home */
+    .what {
+        width: 65%;
+    }
+
+    .what p {
+        font-size: 1rem;
+    }
+
+    .sec-headeing {
+        font-size: 1.3rem;
+    }
+
+    .yoganeed {
+        width: 65%;
+    }
+
+    .yoganeed ul {
+        font-size: 1rem;
+    }
+
+    .benefit {
+        width: 65%;
+    }
+
+    .benefit div {
+        font-size: 1rem;
+    }
+
+    .proper {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .donts {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .history {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .footer {
+        margin-top: 5vh;
+    }
+
+    .address {
+        padding: 20px 70px 20px 0px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        padding: 10px 70px 10px 0px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .socialmedia {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    /* ------------beginners------------- */
+    .beg-hero {
+        height: 55vh;
+    }
+
+    .card {
+        width: 75%;
+    }
+
+    .card img {
+        width: 350px;
+    }
+
+    .card .beg-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .card .beg-text p {
+        font-size: .95rem;
+    }
+
+    /* ---------------------how to start practice page-------------- */
+    .practice-heading {
+        padding: 40px;
+    }
+
+    .prac-heading-text {
+        width: 75%;
+    }
+
+    .prac-heading-text>h2 {
+        font-size: 1.7rem;
+    }
+
+    .prac-heading-text>p {
+        font-size: 1.1rem;
+    }
+
+    .practice-heading>img {
+        width: 450px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .practice-text {
+        width: 80%;
+    }
+
+    .practice-text>p {
+        font-size: 1.1rem;
+    }
+
+    .practice-text>h3 {
+        font-size: 1.4rem;
+    }
+
+    /* ------------------starting pose page---------------- */
+    .startpose-content {
+        width: 75%;
+        margin: auto;
+    }
+
+    .startpose-content>.p1 {
+        font-size: 1.1rem;
+    }
+
+    .start-poses>h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content>img {
+        width: 600px;
+        margin: auto;
+    }
+
+    .content>ol {
+        margin-left: 50px;
+        margin-top: 25px;
+        font-size: 1rem;
+    }
+
+    .content>ol>li {
+        margin-bottom: 10px;
+    }
+
+    /* -----------------at home page--------------- */
+    .athome {
+        width: 75%;
+    }
+
+    .athome>h2 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
+    .athome>p {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    /* --------------------accessories page--------------------- */
+    .accesories {
+        width: 75%;
+        margin: auto;
+    }
+
+    .accessories-card>h3 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .accessories-content>.text {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .accessories-content>img {
+        width: 550px;
+    }
+
+    /* ---------------------cloths page------------- */
+    .cloths {
+        width: 75%;
+    }
+
+    .cloths>h2 {
+        margin-top: 30px;
+        font-size: 1.5rem;
+    }
+
+    .cloths>p {
+        font-size: 1rem;
+    }
+
+    /* ---------------------poses page-------------- */
+    .pose-hero {
+        height: 55vh;
+    }
+
+    .pose-main h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pose-category {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .container {
+        width: auto;
+        padding: 20px;
+        margin: 15px 30px;
+    }
+
+    .pose-card>h2 {
+        font-size: 1.2rem;
+    }
+
+    /* ---------------poses inner pages------------- */
+    .inpose-heading {
+        padding-top: 25px;
+    }
+
+    .inpose-heading>h1 {
+        font-size: 1.8rem;
+    }
+
+    .inpose-heading>img {
+        width: 650px;
+    }
+
+    .inpose-text {
+        width: 75%;
+    }
+
+    .inpose-text>h2 {
+        font-size: 1.6rem;
+    }
+
+    .inpose-text>ol {
+        font-size: 1rem;
+    }
+
+    .inpose-text>p {
+        font-size: 1rem;
+    }
+
+    /* ----------------suryanamaskar----------------- */
+    .suryanamaskar>h1 {
+        font-size: 1.7rem;
+    }
+
+    .position-content {
+        width: 75%;
+    }
+
+    .position-content>h2 {
+        font-size: 1.5rem;
+    }
+
+    .position-content>img {
+        width: 600px;
+    }
+
+    .surya-positions>h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+        width: 75%;
+    }
+
+    .surya-positions>p {
+        width: 75%;
+    }
+
+    /* ------------------everyone page------------------ */
+    .everyone-hero {
+        height: 55vh;
+    }
+
+    /* ---------------------------elders asan page------------------------- */
+.elders-main>h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+}
+.elders-main>p{
+    padding: 0px 90px 20px 90px;
+}
+.elders-asan{
+    width: 70%;
+}
+.elders-asan>h1{
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.elders-asan>img{
+    width: 670px;
+}
+.elders-asan>h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.elders-asan>ol{
+    margin-left: 25px;
+}
+.elders-asan>ol>li{
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.elders-asan>.elder-benefit{
+    font-size: 1rem;
+}
+
+/* -----------------------meditation page---------------- */
+.med-hero {
+    height: 55vh;
+}
+
+/* ----------------------ashtang page-------------- */
+.position-content>ul{
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 1rem;
+}
+.position-content>ul>li{
+    margin-bottom: 10px;
+}
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* code in this block will be applied only if device width>768 and <1024 */
+    .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .dropdown_menu a {
+        margin: 10px 15px 10px 10px;
+        border-radius: 3px;
+        font-size: 1.1rem;
+        border: 1px solid #28231e;
+    }
+
+    /* ----------hero section---------- */
+    .hero {
+        height: 48vh;
+    }
+
+    .herotext {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+
+    .herotext p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+    }
+
+    /* home */
+    .what {
+        width: 65%;
+    }
+
+    .what p {
+        font-size: 1rem;
+    }
+
+    .sec-headeing {
+        font-size: 1.3rem;
+    }
+
+    .yoganeed {
+        width: 65%;
+    }
+
+    .yoganeed ul {
+        font-size: 1rem;
+    }
+
+    .benefit {
+        width: 65%;
+    }
+
+    .benefit div {
+        font-size: 1rem;
+    }
+
+    .proper {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .donts {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .history {
+        width: 65%;
+        font-size: 1rem;
+    }
+
+    .footer {
+        margin-top: 5vh;
+    }
+
+    .address {
+        padding: 20px 70px 20px 0px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        padding: 10px 70px 10px 0px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .socialmedia {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    /* ------------beginners------------- */
+    .beg-hero {
+        height: 48vh;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .card img {
+        width: 300px;
+    }
+
+    .card .beg-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .card .beg-text p {
+        font-size: .95rem;
+    }
+
+    /* ---------------------how to start practice page-------------- */
+    .practice-heading {
+        padding: 40px;
+    }
+
+    .prac-heading-text {
+        width: 90%;
+    }
+
+    .prac-heading-text>h2 {
+        font-size: 1.7rem;
+    }
+
+    .prac-heading-text>p {
+        font-size: 1.1rem;
+    }
+
+    .practice-heading>img {
+        width: 450px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .practice-text {
+        width: 90%;
+    }
+
+    .practice-text>p {
+        font-size: 1.1rem;
+    }
+
+    .practice-text>h3 {
+        font-size: 1.4rem;
+    }
+
+    /* ------------------starting pose page---------------- */
+    .startpose-content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .startpose-content>.p1 {
+        font-size: 1.1rem;
+    }
+
+    .start-poses>h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content>img {
+        width: 600px;
+        margin: auto;
+    }
+
+    .content>ol {
+        margin-left: 50px;
+        margin-top: 25px;
+        font-size: 1rem;
+    }
+
+    .content>ol>li {
+        margin-bottom: 10px;
+    }
+
+    /* -----------------at home page--------------- */
+    .athome {
+        width: 80%;
+    }
+
+    .athome>h2 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
+    .athome>p {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    /* --------------------accessories page--------------------- */
+    .accesories {
+        width: 80%;
+        margin: auto;
+    }
+
+    .accessories-card>h3 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .accessories-content>.text {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .accessories-content>img {
+        width: 550px;
+    }
+
+    /* ---------------------cloths page------------- */
+    .cloths {
+        width: 80%;
+    }
+
+    .cloths>h2 {
+        margin-top: 30px;
+        font-size: 1.5rem;
+    }
+
+    .cloths>p {
+        font-size: 1rem;
+    }
+
+    /* ---------------------poses page-------------- */
+    .pose-hero {
+        height: 55vh;
+    }
+
+    .pose-main h1 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pose-category {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container {
+        width: auto;
+        padding: 20px;
+        margin: 15px 20px;
+    }
+
+    .pose-card>h2 {
+        font-size: 1.2rem;
+    }
+
+    /* ---------------poses inner pages------------- */
+    .inpose-heading {
+        padding-top: 25px;
+    }
+
+    .inpose-heading>h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .inpose-heading>img {
+        width: 600px;
+    }
+
+    .inpose-text {
+        width: 75%;
+    }
+
+    .inpose-text>h2 {
+        font-size: 1.5rem;
+    }
+
+    .inpose-text>ol {
+        font-size: 1rem;
+    }
+
+    .inpose-text>p {
+        font-size: 1rem;
+    }
+
+    /* ----------------suryanamaskar----------------- */
+    .suryanamaskar>h1 {
+        font-size: 1.5rem;
+    }
+
+    .position-content {
+        width: 75%;
+    }
+
+    .position-content>h2 {
+        font-size: 1.3rem;
+    }
+
+    .position-content>img {
+        width: 500px;
+    }
+
+    .position-content>p {
+        font-size: 1rem;
+    }
+
+    .surya-positions>h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.3rem;
+        width: 75%;
+    }
+
+    .surya-positions>p {
+        width: 75%;
+        font-size: 1rem;
+    }
+
+    /* --------------------evryone page--------------- */
+    .everyone-hero {
+        height: 48vh;
+    }
+
+    /* ---------------------------elders asan page------------------------- */
+.elders-main>h1{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+}
+.elders-main>p{
+    padding: 0px 70px 20px 70px;
+}
+.elders-asan{
+    width: 75%;
+}
+.elders-asan>h1{
+    font-size: 1.3rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.elders-asan>img{
+    width: 570px;
+}
+.elders-asan>h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.elders-asan>ol{
+    margin-left: 20px;
+}
+.elders-asan>ol>li{
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.elders-asan>.elder-benefit{
+    font-size: 1rem;
+}
+
+/* -----------------------meditation page---------------- */
+.med-hero {
+    height: 48vh;
+}
+
+/* ----------------------ashtang page-------------- */
+.position-content>ul{
+    margin-top: 10px;
+    margin-left: 35px;
+    font-size: 1rem;
+}
+.position-content>ul>li{
+    margin-bottom: 10px;
+}
+
+}
+
+/* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* code in this block will be applied only if device width>481 and <767 */
+    .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown_menu {
+        display: block;
+        left: 60%;
+        width: 40%;
+    }
+
+    .dropdown_menu a {
+        margin: 10px 15px 10px 10px;
+        padding: 10px 0px 10px 10px;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #28231E;
+        border-radius: 3px;
+        border: 1px solid #28231e;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    /* ----------hero section---------- */
+    .hero {
+        height: 40vh;
+    }
+
+    .herotext {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .herotext p {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    /* home */
+    .what {
+        width: 70%;
+    }
+
+    .what p {
+        font-size: 1rem;
+    }
+
+    .sec-headeing {
+        font-size: 1.3rem;
+    }
+
+    .yoganeed {
+        width: 70%;
+        margin-top: -10px;
+    }
+
+    .yoganeed ul {
+        font-size: 1rem;
+    }
+
+    .benefit {
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    .benefit div {
+        font-size: 1rem;
+    }
+
+    .proper {
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .donts {
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .history {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .footer {
+        margin-top: 5vh;
+        margin-top: 10px;
+    }
+
+    .address {
+        padding: 20px 30px 20px 0px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        padding: 10px 30px 10px 0px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .socialmedia {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* ------------beginners------------- */
+    .beg-hero {
+        height: 40vh;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card img {
+        width: 250px;
+    }
+
+    .card .beg-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .card .beg-text p {
+        font-size: .9rem;
+    }
+
+    .card .beg-text a {
+        font-size: .9rem;
+    }
+
+    /* ---------------------how to start practice page-------------- */
+    .practice-heading {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .prac-heading-text {
+        width: 100%;
+    }
+
+    .prac-heading-text>h2 {
+        font-size: 1.6rem;
+    }
+
+    .prac-heading-text>p {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .practice-heading>img {
+        width: 450px;
+        margin-top: 20px;
+    }
+
+    .practice-text {
+        width: 90%;
+    }
+
+    .practice-text>p {
+        font-size: 1rem;
+    }
+
+    .practice-text>h3 {
+        font-size: 1.2rem;
+    }
+
+    /* ------------------starting pose page---------------- */
+    .startpose-content {
+        width: 85%;
+        margin: auto;
+    }
+
+    .startpose-content>.p1 {
+        font-size: 1rem;
+    }
+
+    .start-poses>h3 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content>img {
+        width: 450px;
+        margin: auto;
+    }
+
+    .content>ol {
+        margin-left: 35px;
+        margin-top: 25px;
+        font-size: 0.9rem;
+    }
+
+    .content>ol>li {
+        margin-bottom: 10px;
+    }
+
+    /* -----------------at home page--------------- */
+    .athome {
+        width: 85%;
+    }
+
+    .athome>h2 {
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+
+    .athome>p {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* --------------------accessories page--------------------- */
+    .accesories {
+        width: 85%;
+        margin: auto;
+    }
+
+    .accessories-card>h3 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .accessories-content>.text {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .accessories-content>img {
+        width: 450px;
+    }
+
+    /* ---------------------cloths page------------- */
+    .cloths {
+        width: 85%;
+    }
+
+    .cloths>h2 {
+        font-size: 1.2rem;
+    }
+
+    .cloths>p {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    /* ---------------------poses page-------------- */
+    .pose-hero {
+        height: 45vh;
+    }
+
+    .pose-main h1 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pose-category {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        width: auto;
+        padding: 15px;
+        margin: 15px 10px;
+    }
+
+    .pose-card>h2 {
+        font-size: 1.1rem;
+    }
+
+    /* ---------------poses inner pages------------- */
+    .inpose-heading {
+        padding-top: 20px;
+    }
+
+    .inpose-heading>h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .inpose-heading>img {
+        width: 430px;
+        margin-bottom: 25px;
+    }
+
+    .inpose-text {
+        width: 80%;
+    }
+
+    .inpose-text>h2 {
+        margin-top: 25px;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .inpose-text>ol {
+        font-size: 1rem;
+    }
+
+    .inpose-text>p {
+        font-size: 1rem;
+    }
+
+    /* ----------------suryanamaskar----------------- */
+    .suryanamaskar>h1 {
+        font-size: 1.4rem;
+    }
+
+    .position-content {
+        width: 80%;
+    }
+
+    .position-content>h2 {
+        font-size: 1.2rem;
+    }
+
+    .position-content>img {
+        width: 400px;
+    }
+
+    .position-content>p {
+        font-size: 0.95rem;
+    }
+
+    .surya-positions>h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .surya-positions>p {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    /* ----------------------everyone page----------- */
+    .everyone-hero {
+        height: 40vh;
+    }
+
+    /* ---------------------------elders asan page------------------------- */
+.elders-main>h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+.elders-main>p{
+    padding: 0px 30px 20px 30px;
+}
+.elders-asan{
+    width: 80%;
+}
+.elders-asan>h1{
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.elders-asan>img{
+    width: 420px;
+}
+.elders-asan>h2{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+.elders-asan>ol{
+    margin-left: 20px;
+}
+.elders-asan>ol>li{
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.elders-asan>.elder-benefit{
+    font-size: 0.9rem;
+}
+
+/* -----------------------meditation page---------------- */
+.med-hero {
+    height: 40vh;
+}
+
+/* ----------------------ashtang page-------------- */
+.position-content>ul{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 0.9rem;
+}
+.position-content>ul>li{
+    margin-bottom: 10px;
+}
+}
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* code in this block will be applied only if device width>320 and <480 */
+    .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown_menu {
+        display: block;
+        left: 43%;
+        width: 57%;
+    }
+
+    .dropdown_menu {
+        top: 9vh;
+    }
+
+    .dropdown_menu a {
+        margin: 10px 15px 10px 10px;
+        padding: 10px 0px 10px 10px;
+        font-size: .9rem;
+        text-decoration: none;
+        color: #28231E;
+        border-radius: 3px;
+        border: 1px solid #28231e;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    /* ----------hero section---------- */
+    .hero {
+        height: 35vh;
+    }
+
+    .herotext {
+        width: 85%;
+        font-size: 0.8rem;
+    }
+
+    .herotext p {
+        margin-top: 15px;
+        font-size: 0.8rem;
+    }
+
+    /* home */
+    .what {
+        width: 85%;
+        margin-top: 3vh;
+    }
+
+    .what p {
+        font-size: 0.9rem;
+    }
+
+    .sec-headeing {
+        font-size: 1.1rem;
+    }
+
+    .yoganeed {
+        width: 85%;
+        margin-top: -10px;
+    }
+
+    .yoganeed ul {
+        font-size: 0.9rem;
+    }
+
+    .benefit {
+        width: 85%;
+        margin-top: 10px;
+    }
+
+    .benefit div {
+        font-size: 0.9rem;
+    }
+
+    .proper {
+        width: 85%;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .donts {
+        width: 85%;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .history {
+        width: 85%;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .footer {
+        margin-top: 5vh;
+    }
+
+    .contect {
+        /* display: flex; */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address {
+        padding: 0px;
+        border: none;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .number {
+        padding: 0px;
+        border: none;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .socialmedia {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* ------------beginners------------- */
+    .beg-hero {
+        height: 35vh;
+    }
+
+    .beg-main {
+        margin-top: 40px;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 40px;
+        background-origin: padding-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 380px;
+        max-width: 100%;
+        height: auto;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: calc(20px - 20px);
+    }
+
+    .card .beg-text h3 {
+        font-size: 1rem;
+    }
+
+    .card .beg-text p {
+        font-size: .8rem;
+    }
+
+    .card .beg-text a {
+        font-size: .8rem;
+    }
+
+    /* ---------------------how to start practice page-------------- */
+    .practice-heading {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .prac-heading-text {
+        width: 100%;
+    }
+
+    .prac-heading-text>h2 {
+        font-size: 1.4rem;
+    }
+
+    .prac-heading-text>p {
+        font-size: .9rem;
+        width: 100%;
+    }
+
+    .practice-heading>img {
+        width: 350px;
+        margin-top: 20px;
+    }
+
+    .practice-text {
+        width: 90%;
+    }
+
+    .practice-text>p {
+        font-size: 0.9rem;
+    }
+
+    .practice-text>h3 {
+        font-size: 1.1rem;
+    }
+
+    /* ------------------starting pose page---------------- */
+    .startpose-content {
+        width: 90%;
+        margin: auto;
+    }
+
+    .startpose-content>.p1 {
+        font-size: 0.9rem;
+    }
+
+    .start-poses>h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content>img {
+        width: 350px;
+        margin: auto;
+    }
+
+    .content>ol {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+
+    .content>ol>li {
+        margin-bottom: 10px;
+    }
+
+    /* -----------------at home page--------------- */
+    .athome {
+        width: 90%;
+    }
+
+    .athome>h2 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    .athome>p {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* --------------------accessories page--------------------- */
+    .accesories {
+        width: 90%;
+        margin: auto;
+    }
+
+    .accessories-card>h3 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .accessories-content>.text {
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+
+    .accessories-content>img {
+        width: 350px;
+    }
+
+    /* ---------------------cloths page------------- */
+    .cloths {
+        width: 90%;
+    }
+
+    .cloths>h2 {
+        margin-top: 30px;
+        font-size: 1.1rem;
+    }
+
+    .cloths>p {
+        font-size: 0.9rem;
+    }
+
+    /* ---------------------poses page-------------- */
+    .pose-hero {
+        height: 38vh;
+    }
+
+    .pose-main h1 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .pose-category {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        width: auto;
+        padding: 15px;
+        margin: 15px 10px;
+    }
+
+    .pose-card>h2 {
+        font-size: 0.9rem;
+    }
+
+    /* ---------------poses inner pages------------- */
+    .inpose-heading {
+        padding-top: 20px;
+    }
+
+    .inpose-heading>h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .inpose-heading>img {
+        width: 340px;
+        margin-bottom: 20px;
+    }
+
+    .inpose-text {
+        width: 90%;
+    }
+
+    .inpose-text>h2 {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .inpose-text>ol {
+        font-size: 0.9rem;
+        margin-left: 15px;
+    }
+
+    .inpose-text>p {
+        font-size: 0.9rem;
+    }
+
+    /* ----------------suryanamaskar----------------- */
+    .suryanamaskar>h1 {
+        font-size: 1.2rem;
+    }
+
+    .position-content {
+        width: 90%;
+    }
+
+    .position-content>h2 {
+        font-size: 1.1rem;
+    }
+
+    .position-content>img {
+        width: 300px;
+    }
+
+    .position-content>p {
+        font-size: 0.9rem;
+    }
+
+    .surya-positions>h2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    .surya-positions>p {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    /* -------------------everyone page-------------- */
+    .everyone-hero {
+        height: 35vh;
+    }
+
+    /* ---------------------------elders asan page------------------------- */
+    .elders-main>h1 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .elders-main>p {
+        padding: 0px 20px 20px 20px;
+    }
+
+    .elders-asan {
+        width: 90%;
+    }
+
+    .elders-asan>h1 {
+        font-size: 1.1rem;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .elders-asan>img {
+        width: 350px;
+    }
+
+    .elders-asan>h2 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .elders-asan>ol {
+        margin-left: 20px;
+    }
+
+    .elders-asan>ol>li {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+
+    .elders-asan>.elder-benefit {
+        font-size: 0.9rem;
+    }
+
+    /* -----------------------meditation page---------------- */
+.med-hero {
+    height: 35vh;
+}
+
+/* ----------------------ashtang page-------------- */
+.position-content>ul{
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 0.9rem;
+}
+.position-content>ul>li{
+    margin-bottom: 10px;
+}
+}

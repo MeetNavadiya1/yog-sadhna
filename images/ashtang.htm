@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta name="viewport" content="width=device-width"><script type="text/javascript">
+if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;href.match(/[?&]nopostload/)||(-1==href.indexOf("?")?-1==href.indexOf("#")?document.location.href=href+"?nopostload=1":document.location.href=href.replace("#","?nopostload=1#"):-1==href.indexOf("#")?document.location.href=href+"&nopostload=1":document.location.href=href.replace("#","&nopostload=1#"))}
+</script>
+<script type="text/javascript">
+class AOLLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventListener,e.eventOptions))}_removeUserInteractionListener(e){this.triggerEvents.forEach(t=>window.removeEventListener(t,e.userEventListener,e.eventOptions))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._triggerDOMContentLoaded(),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerWindowLoad(),window.dispatchEvent(new Event("aol-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=js-postload]").forEach(e=>{e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-aol-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){return await this._requestAnimFrame(),new Promise(t=>{const n=document.createElement("script");let i;[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-aol-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))}),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)})}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach(t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}}),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"aol-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["aol"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("aol-DOMContentLoaded",()=>t.bind(document)(n))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"aol-jquery-load":e).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]})}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("aol-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("aol-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("aol-readystatechange")),await this._requestAnimFrame(),document.aolonreadystatechange&&document.aolonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("aol-load")),await this._requestAnimFrame(),window.aolonload&&window.aolonload(),await this._requestAnimFrame(),this.allJQueries.forEach(e=>e(window).trigger("aol-jquery-load")),window.dispatchEvent(new Event("aol-pageshow")),await this._requestAnimFrame(),window.aolonpageshow&&window.aolonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),a=n.parentElement;let r=e.get(n);void 0===r&&(r=n.nextSibling,e.set(n,r));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),a.insertBefore(o,r)}}async _requestAnimFrame(){return new Promise(e=>requestAnimationFrame(e))}static run(){const e=new AOLLazyLoadScripts(["load","keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}AOLLazyLoadScripts.run();
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"BlogPosting","headline":"Story of Patanjali and the Gift of Yoga Knowledge","image":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/styles\/facebook_thumb\/public?itok=6F7etST1","genre":"Patanjali Yoga Sutras","keywords":"Patanjali Yoga Sutras, Yoga Sutras of Patanjali, Patanjali Story, Commentaries on Patanjali Yoga Sutras","publisher":"The Art of Living","url":"https:\/\/www.artofliving.org\/yoga\/patanjali-yogasutra\/knowledge-sheet-1","datePublished":"2013-09-09","dateCreated":"2013-09-09","dateModified":"2023-07-31","description":"Story from Puranas about how Patanjali started sharing Yoga Sutras. This is the first in a series of articles based on Sri Sri Ravi Shankar\u2019s commentary of the Patanjali Yoga Sutras. This ancient scripture enumerates many principles which are the foundation of yoga."}</script><script>var node_taxonomy =[971,"209"];</script><script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"patanjali yogasutra","item":"https:\/\/www.artofliving.org\/yoga\/patanjali-yogasutra"},{"@type":"ListItem","position":2,"name":"knowledge sheet 1","item":"https:\/\/www.artofliving.org\/yoga\/knowledge-sheet-1"}]}</script><link rel="canonical" href="https://www.artofliving.org/yoga/patanjali-yogasutra/knowledge-sheet-1" />
+<link rel="shortcut icon" href="https://www.artofliving.org/sites/all/themes/aol-zen/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Story from Puranas about how Patanjali started sharing Yoga Sutras. This is the first in a series of articles based on Sri Sri Ravi Shankar’s commentary of the Patanjali Yoga Sutras. This ancient scripture enumerates many principles which are the foundation of yoga.Story of Patanjali and the Gift of Yoga Knowledge - Patanjali Yoga Sutras" />
+<meta name="keywords" content="Patanjali Yoga Sutras, Yoga Sutras of Patanjali, Patanjali Story, Commentaries on Patanjali Yoga Sutras" />
+<link rel="shortlink" href="https://www.artofliving.org/node/71138" />
+<meta property="og:title" content="Story of Patanjali and the Gift of Yoga Knowledge" />
+<meta property="fb:app_id" content="1671756029737991" />
+<meta property="og:description" content="Story from Puranas about how Patanjali started sharing Yoga Sutras. This is the first in a series of articles based on Sri Sri Ravi Shankar’s commentary of the Patanjali Yoga Sutras. This ancient scripture enumerates many principles which are the foundation of yoga." />
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="Art Of Living (Global)" />
+<meta property="og:type" content="Article" />
+<meta property="og:image" content="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/subscribe_5_5.jpg?itok=dlzSqmSR" />
+<meta property="og:url" content="https://www.artofliving.org/yoga/patanjali-yogasutra/knowledge-sheet-1" />
+<link rel="alternate" href="https://www.artofliving.org/lt-lt/01-patan%C5%BEalio-istorija-ir-jogos-%C5%BEini%C5%B3-dovana-1-dalis" hreflang="lt-lt" />
+<link rel="alternate" href="https://www.artofliving.org/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en" />
+<link rel="alternate" href="https://www.artofliving.org/bg-bg/%D0%B9%D0%BE%D0%B3%D0%B0/%D0%B9%D0%BE%D0%B3%D0%B0-%D1%81%D1%83%D1%82%D1%80%D0%B8-%D0%BD%D0%B0-%D0%BF%D0%B0%D1%82%D0%B0%D0%BD%D0%B4%D0%B6%D0%B0%D0%BB%D0%B8/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%D1%82%D0%B0-%D0%BD%D0%B0-%D0%BF%D0%B0%D1%82%D0%B0%D0%BD%D0%B4%D0%B6%D0%B0%D0%BB%D0%B8" hreflang="bg-bg" />
+<link rel="alternate" href="https://www.artofliving.org/dk-da/historien-om-patanjali-og-yoga-visdommen-del-1" hreflang="da-dk" />
+<link rel="alternate" href="https://www.artofliving.org/br-pt/yoga/patanjali-yogasutras/nota-de-conhecimento-1" hreflang="pt-br" />
+<link rel="alternate" href="https://www.artofliving.org/mx-es/historia-de-patanjali-y-el-regalo-del-conocimiento-1a-parte" hreflang="es-mx" />
+<link rel="alternate" href="https://www.artofliving.org/in-te/yoga/patanjali-yogasutra/gift-yoga-knowledge-part-1" hreflang="te-in" />
+<link rel="alternate" href="https://www.artofliving.org/us-en/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en-us" />
+<link rel="alternate" href="https://www.artofliving.org/in-gu/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="gu-in" />
+<link rel="alternate" href="https://www.artofliving.org/in-hi/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="hi-IN" />
+<link rel="alternate" href="https://www.artofliving.org/au-en/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en-au" />
+<link rel="alternate" href="https://www.artofliving.org/ca-en/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en-ca" />
+<link rel="alternate" href="https://www.artofliving.org/in-en/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en-in" />
+<link rel="alternate" href="https://www.artofliving.org/uk-en/yoga/patanjali-yogasutra/knowledge-sheet-1" hreflang="en-gb" />
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="@artofliving" />
+<meta property="twitter:title" content="Story of Patanjali and the Gift of Yoga Knowledge" />
+<meta property="twitter:text:title" content="Story of Patanjali and the Gift of Yoga Knowledge" />
+<meta property="twitter:description" content="Story from Puranas about how Patanjali started sharing Yoga Sutras. This is the first in a series of articles based on Sri Sri Ravi Shankar’s commentary of the Patanjali Yoga Sutras. This ancient scripture enumerates many principles which are the foundation of yoga." />
+<meta property="twitter:image" content="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/subscribe_5_5.jpg?itok=dlzSqmSR" />
+<meta property="twitter:domain" content="Art Of Living (Global)" />
+<meta name="robots" content="max-image-preview:large" />
+  <title>Story of Patanjali and the Gift of Yoga Knowledge - Patanjali Yoga Sutras | The Art Of Living Global</title>
+  <meta http-equiv="content-language" content="en">
+  <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    
+  <meta http-equiv="cleartype" content="on">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Medium.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Bold.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Book.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Light.woff">
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_aKfGw0B_RMfUXbi1ZKM-nVrZCcaLzU23ETM4q0ZT83g.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_7KdSbJtuPJFqQPINHRh0HHNHRU6mPFCNbxHTUGH1qjw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_kOFToDddPCQzGDu6rR8B75ZM9GWv4VvXGUCo3DugQD0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_j0c0u1ShdWWTaztkwIc2nFHQ_NYzLoTV55M6Ohp50WA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_aOxzyMj4O-2Gwnd6OC4frrCar49X3tMPNr4yUkD5-Ro.css" media="only screen and (max-width: 767px) " />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_vAAHhvhT91hVIkzWvef2esBqrn8aCwqmUVzoI0rdQmI.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.blog_promoted_load_more{text-align:center;}.blog_promoted_load_more .load_more{cursor:pointer;background:#feae00;padding:10px 20px;border-radius:6px;color:#fff;font-family:'Gotham Narrow Medium';}.promoted-main .promoted-tag.promoted-link a{padding:8px 25px;background:#fff;box-shadow:0 0 10px #dadada;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_t3rHFPU_dzXbDYvI6erwIpWlfnNqdbpHZ6IzvW-f8WE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_ENc-LsCoWKYk4As-Mo2hWK3wFSjlnRi1IlNfN3D_Q6Y.css" media="all" />
+<script type="js-postload" src="https://www.artofliving.org/sites/all/modules/jquery_update/replace/jquery/2.2/jquery.min.js?v=2.2.4"></script>
+<script type="js-postload" src="https://www.artofliving.org/misc/jquery.once.js?v=1.2"></script>
+<script type="js-postload" src="https://www.artofliving.org/misc/drupal.js?rzkqhj"></script>
+<script type="js-postload" src="https://www.artofliving.org/sites/all/themes/unity2/js/variables.js?rzkqhj"></script>
+
+</head>
+<body class="unity2 html not-front not-logged-in no-sidebars page-node page-node- page-node-71138 node-type-aolweb-page i18n-en" >
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5335998-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-5335998-1');
+</script>
+<!-- Google Tag Manager -->
+<script type="js-postload">
+(function(w,d,s,l,i, $){
+  var tagLoaded = false, tagTimeout;
+function loadTagManager() {
+  if (false == tagLoaded) {
+    tagLoaded = true;
+    clearTimeout(tagTimeout);
+    
+      w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  }
+}
+$( window ).on("scroll.tagmanagerload", function() {
+  loadTagManager();          
+  console.log("google scroll");    
+  $(this).off('scroll.tagmanagerload');
+});
+$( document ).ready(function() {
+  tagTimeout = setTimeout(function(){
+    console.log("google timeout");
+    $(this).off('scroll.tagmanagerload');
+    loadTagManager();      
+   }, 10000);
+          
+});
+
+})(window,document,'script','dataLayer','GTM-N2J496', jQuery);</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2J496"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- <div class="sticky-wrapper">
+    <div class="stick-container top" style="background-color:#FFAE00;"><span class="sticky-text">Gurudev Sri Sri Ravi Shankar in Europe 11-28 April</span><a class="orange-grad" href="https://www.artofliving.org/eu-en/search/course">View Programme</a> <span class="close-icons uk-close-icon">×</span></div>
+  </div> -->
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top topnav mar-b-0 main-nav bbb" role="navigation" >
+  <div class="mobile-12">
+    <!--only mobile-->
+    <div id="mobile-header">
+      <a id="responsive-menu-button" href="#sidr-main"></a>
+      <span class="local_center_menu_head">National Website Menu</span>
+    </div>
+
+    <div id="navigation">
+      <a id="responsive-menu-close-button" href="#sidr-main"></a>
+      <nav class="nav">
+        <ul class="nav navbar-nav navbar-left" id="mobile-menu-content">
+       
+        </ul>
+        <script type="js-postload">
+        (function($) {
+          $("#responsive-menu-button").on("click.menu", function() {
+            $(this).off('click.menu');
+						$("#mobile-menu-content, #sidr-id-mobile-menu-content").html($("#desktop-menu-content").html());
+          });
+          $("#mobile-menu-content, #sidr-id-mobile-menu-content").html($("#desktop-menu-content").html());
+
+          $(".main_sub_menu_arrow").click(function (){
+              if($(window).width() < 767){
+                $(this).parent().find('ul').slideToggle();
+              }
+          })
+
+          $(".menu_arrow").click(function (){
+              if($(window).width() < 767){
+                $(this).parent().find('.sub-menu').slideToggle();
+                 $(this).parent().toggleClass("active-submenu");
+              }
+          })
+        })(jQuery);
+        </script>
+              </nav>
+                         <div class="humberg-center-menu-item">
+              <a href="/search/course" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_crs_icon"></i><span>find a course</span></div></a>
+                   <a href="/search/center" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_center_icon"></i><span>find a center</span></div></a>
+            </div>
+              <div class="talk_teacher">
+        <span>Talk to a Teacher</span>
+        <a href="tel:+91 8067612345​" class="track_call">+91 8067612345​</a>
+              </div>
+            
+  
+      
+            <ul class="social mar-t-10">
+      		        <li><a href="https://www.twitter.com/srisri"><i class="icon25 twt_icon"></i></a></li>
+	     		        <li><a href="https://www.facebook.com/TheArtOfLivingGlobal"><i class="icon25 fb_icon"></i></a></li>
+	      	        <li><a href="https://www.youtube.com/artoflivingtv"><i class="icon25 ytube_icon"></i></a></li>
+	            </ul>
+    </div>
+    <!--only mobile end-->
+
+   
+    <div class="logo-2 pad-0">
+      <a class="navbar-brand topnav logo" href="/global/home"><img class="img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/images/logo/artofliving_logo_1_0_0.png" alt="AOL logo" height="60" width="157" > </a>
+    </div>
+
+    <div class="menu-web-10 pad-0 ">
+      <div class="mobile-12 pad-0 mar-t-15 right_menu">
+        <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left unity_menu" id ="desktop-menu-content">
+            <li  data-tids="[]">
+          <a class="item-primary" href="/programs">Programs</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/happiness-program" class="DropdownMenuLink" title="" data-text="Happiness">Happiness</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a href="/introductory-sessions" class="DropdownMenuLink" title="" data-text="Intro">Intro</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a href="/yoga/srisriyoga" class="DropdownMenuLink" title="" data-text="Yoga">Yoga</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a href="/sahaj-samadhi-meditation" class="DropdownMenuLink" title="" data-text="Meditation">Meditation</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a href="/art-silence-retreat" class="DropdownMenuLink" title="" data-text="Advanced">Advanced</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/art-silence-retreat" class="DropdownMenuLink" title="" data-text="Silence Program">Silence Program</a></span></li><li><span><a href="/volunteer-training" class="DropdownMenuLink" title="" data-text="Volunteer Training">Volunteer Training</a></span></li><li><span><a href="/practice-groups" class="DropdownMenuLink" title="" data-text="Practice Groups">Practice Groups</a></span></li><li><span><a href="/other-graduate-programs" class="DropdownMenuLink" data-text="Other Graduate Programs" title="">Other Graduate Programs</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/programs#admin-element-420022">Events</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item7 -link"><span class="DropdownMenuLink "><a href="/youth-program" class="DropdownMenuLink" title="" data-text="Children and Teens">Children and Teens</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/service-projects">Projects</a>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/wisdom">Wisdom</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/wisdom-videos">Videos</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a href="/wisdom-commentaries" class="DropdownMenuLink" title="" data-text="Commentaries">Commentaries</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/wisdom-commentary-upanishads" class="DropdownMenuLink" title="" data-text="Upanishads">Upanishads</a></span></li><li><span><a href="/wisdom-commentaries-ashtavakra-gita" class="DropdownMenuLink" title="" data-text="Ashtavakra Gita">Ashtavakra Gita</a></span></li><li><span><a href="/wisdom-series-bhakti-sutra" class="DropdownMenuLink" title="" data-text="Bhakti Sutras">Bhakti Sutras</a></span></li><li><span><a href="/wisdom-series-yoga-sutras" class="DropdownMenuLink" title="" data-text="Yoga Sutras">Yoga Sutras</a></span></li><li><span><a href="/wisdom-series-bhagavad-gita" class="DropdownMenuLink" title="" data-text="Bhagavad Gita">Bhagavad Gita</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a href="/wisdom-by-theme" class="DropdownMenuLink" title="" data-text="Wisdom by Theme">Wisdom by Theme</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/relationship-advice-sri-sri" class="DropdownMenuLink" title="" data-text="Relationship">Relationship</a></span></li><li><span><a href="/finding-sustainable-happiness" class="DropdownMenuLink" title="" data-text="Happiness">Happiness</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a href="/wisdom/relationships" class="DropdownMenuLink" title="" data-text="Relationships">Relationships</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a href="/wisdom/emotions" class="DropdownMenuLink" title="" data-text="Emotions">Emotions</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/wisdom/story-time">Story Time</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item7 -link"><span class="DropdownMenuLink "><a href="/wisdom/daily-tips" class="DropdownMenuLink" title="" data-text="Daily Tips">Daily Tips</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/yoga">Yoga</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/yoga/srisriyoga" class="DropdownMenuLink" title="" data-text="Program">Program</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/yoga/srisriyoga" class="DropdownMenuLink" title="" data-text="Sri Sri Yoga">Sri Sri Yoga</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/yoga-videos">Video</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a href="/health-and-wellness" class="DropdownMenuLink" title="" data-text="Health and Wellness">Health and Wellness</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a href="/yoga-benefits" class="DropdownMenuLink" title="" data-text="Yoga Benefits">Yoga Benefits</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/meditation">Meditation</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/sahaj-samadhi-meditation" class="DropdownMenuLink" title="" data-text="Programs">Programs</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/sahaj-samadhi-meditation" class="DropdownMenuLink" title="" data-text="Sahaj Samadhi Meditation">Sahaj Samadhi Meditation</a></span></li><li><span><a href="/art-silence-retreat" class="DropdownMenuLink" title="" data-text="Silence Program">Silence Program</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/meditation-videos">Guided Meditation</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/ayurveda">Ayurveda</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/coronavirus" class="DropdownMenuLink" title="" data-text="Combat Corona">Combat Corona</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[1377,1368,1378,1380,1374,1370,1128,212,209]">
+          <a class="item-primary" href="/blog">Blog</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/spirituality" class="DropdownMenuLink" title="" data-text="Spirituality">Spirituality</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a href="/lifestyle" class="DropdownMenuLink" title="" data-text="Lifestyle">Lifestyle</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a href="/relationships" class="DropdownMenuLink" title="" data-text="Relationship">Relationship</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a href="/sri-sri" class="DropdownMenuLink" title="" data-text="Gurudev">Gurudev</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[138,139]">
+          <a class="item-primary" href="/about-us">Art of Living</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a href="/founder" class="DropdownMenuLink" title="" data-text="Founder">Founder</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/founder" class="DropdownMenuLink" title="" data-text="Overview">Overview</a></span></li><li><span><a href="/biography" class="DropdownMenuLink" title="" data-text="Biography">Biography</a></span></li><li><span><a href="/awards-and-honours" class="DropdownMenuLink" data-text="Awards and Honors" title="">Awards and Honors</a></span></li><li><span><a href="/srisriontour" class="DropdownMenuLink" title="" data-text="Tour Schedule">Tour Schedule</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a href="/events" class="DropdownMenuLink" title="" data-text="Community Events">Community Events</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a href="/about-organization" class="DropdownMenuLink" title="" data-text="Organization">Organization</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a href="/press" class="DropdownMenuLink" title="" data-text="Newsroom">Newsroom</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/press-releases" class="DropdownMenuLink" title="" data-text="Press Releases">Press Releases</a></span></li><li><span><a href="/media-coverage" class="DropdownMenuLink" title="" data-text="Media Coverage">Media Coverage</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a href="/sudarshan-kriya" class="DropdownMenuLink" title="" data-text="Research">Research</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/sudarshan-kriya" class="DropdownMenuLink" title="" data-text="Research on Sudarshan Kriya">Research on Sudarshan Kriya</a></span></li><li><span><a href="/research-sahaj-samadhi-meditation" class="DropdownMenuLink" title="" data-text="Research on Meditation">Research on Meditation</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/search/center">Centers</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item7 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/art-living-mobile-apps">App</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item8 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/social-media">Stay Connected</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item9 -link"><span class="DropdownMenuLink "><a href="/sri-sri-ravi-shankar-vidya-mandir" class="DropdownMenuLink" title="" data-text="SSRVM">SSRVM</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item10 -link"><span class="DropdownMenuLink "><a href="https://srisriuniversity.edu.in" class="DropdownMenuLink" data-text="Gurudev University" title="" target="_blank">Gurudev University</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item11 -link"><span class="DropdownMenuLink "><a href="/ashram/india" class="DropdownMenuLink" title="" data-text="Ashrams">Ashrams</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/ashram/india" class="DropdownMenuLink" title="" data-text="India">India</a></span></li><li><span><a href="/ashram/international" class="DropdownMenuLink" title="" data-text="International">International</a></span></li></ul><div class="mega-menu-content"></div></li></ul></div>          </li>          </ul>
+                  </div>
+ <!--only for unity new requirement for top rightside course search menu-->
+  <div class="search-contact smart_search_div smart_search_div_global ">
+        <ul class="head_right_sec search_f-7  pad-0">
+                          		<li></li>
+                      <li class="search-pad">
+          	<div class="ce-form-element"><div class="form-type-textfield form-item-center-autocomplete-place-course">
+               <input type="text" id="edit-center-autocomplete-place-course" name="center_autocomplete_google_place_course" value="" size="60" maxlength="128" class="form-text form-control search" placeholder="Search programs or location" autocomplete="off">
+              </div>
+              <div style="display: none;">
+              <input type="text"   value="" class="smart-form-checkbox_value" >
+              </div>
+              </div>
+          	<button class="search-btn">
+              <i class="location-search-icon"></i>
+            </button>
+            <div class="autocomplete_place_course">
+              
+            </div>
+          </li>
+                    
+          
+                              <li class="header-talk-to-teacher " >
+                       <div class="country-icon-wrapper ">
+                                                     <div class="show-search-courses-wrapper hidden-xs">
+                 <a href="/search/course"  class="icon-link">
+                    <span class="how-search-courses">
+                      <i class="how-search-courses-icon ssada"></i>
+                      <span class="how-search-courses-icon-label">
+                        Search programs                      </span>
+                    </span>
+                  </a>
+              </div>
+                                               </div>
+                        <div class="find-center-talk-teacher-phone-wrapper">
+                      <!--      hidding find center tab based on requirement -->
+                <span class="light ">
+                  <a href="/search/center" class="track_call">
+                    Find a center                  </a>
+                </span>
+                                                
+               <span class="find-center-talk-teacher-phone">
+                Talk to a Teacher               </span>
+               <span class="find-center-talk-teacher-phone-detail">
+                 <span class="light">
+                    <a href="tel:+91 8067612345​" class="track_call">
+                      Call:+91 8067612345​                    </a>
+                  </span>
+                                 </span>
+                             </div>
+                    </li>
+                    <!--<li>-->
+                      <!--</li>-->
+        </ul>
+        </div>
+        </div>
+    </div>
+        <div class="cnt_lan_div  showSearchCoursesIcon">
+       <div class="unity_plus_country_locator unity2">
+  <div class="current-country-holder">
+  <div class="Label"  id ="current_country"><a href="#">Global</a>  </div>
+  
+      <ul class="center-changer">
+                                <li class="intl-pop default local"><a class="curren-country-sub">International</a></li>
+      </ul>  
+    
+  </div>        
+    <ul id="CountrySelectorDropdown" class="megamenu CountrySelectorHidden">  
+       <!--     <div class="continent-select continent-country">
+          <input id="continent-select" type="text" placeholder="Select a Region" disabled />
+          <i class="fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="country-select continent-country">
+          <input id="country-select" type="text" placeholder="Select a Country" disabled />
+          <i class="fa-chevron-down" aria-hidden="true"></i>
+        </div>   -->
+        <div class="mobile-country-locator-2-container">
+          <ul class="mobile-country-locator-2">
+            <li class="what-u-lokin-q"><strong> What are you looking for?</strong><span class="close-selector-top"></span></li>
+                          <li class="find-a-course-gl"><a href="/search/course">Find Courses</a></li>
+                        <li class="country-city-chapters"><a href="/search/center">GLOBAL City Centers</a></li>
+            <li class="international-options">International</li>
+            <li class="search-website-gl">Search Website</li>
+          </ul>
+          
+          <div class="change-country-website-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-selector"></span>
+               <h3>Change Country Site</h3>
+               <span class="close-selector"></span>
+             </div>
+             <input id="mobile-country-finder" type="text" placeholder="Enter a Country Name or Code" />
+          </div>
+
+
+          <div class="international-options-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>International</h3><span class="close-selector"></span></div>
+             <div class="International-option-list">
+                <ul>
+                  <li class="change-country-website">Change Country Website</li>
+                  <li class="International-retreat-center">Retreat Centers</li>
+                  <li class="global-website"><a href="/global/home">Global Website</a></li>
+                </ul>
+             </div>
+           </div>
+            <div class="smart-search-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>Find Courses</h3><span class="close-selector"></span></div>
+             <div class="smart-search-option-list">
+                <ul>
+                  <li class="search-course-name">Search Courses By Name</li>
+                  <li class="search-course-location">Search Courses By Location</li>
+                </ul>
+             </div>
+           </div>
+            <div class="search-course-location-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-search-selector"></span>
+               <h3>Search Courses By Location</h3>
+               <span class="close-selector"></span>
+             </div>
+             <form class="home-page-course-search2">
+              <input type="hidden" name="center_autocomplete_google_lat2" value="">
+              <input type="hidden" name="center_autocomplete_google_lng2" value="">
+              <input type="hidden" name="center_autocomplete_google_obj2" value="">
+              
+              <div class="ce-form-element"><div class="form-type-textfield form-item-center-autocomplete-google2">
+               <input type="text" id="edit-center-autocomplete-google2" name="center_autocomplete_google2" value="" size="60" maxlength="128" class="form-text form-control search" placeholder="enter a location" autocomplete="off">
+              </div>
+              </div>
+            </form>
+          </div>
+          <div class="search-course-name-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-search-selector"></span>
+               <h3>Search Courses By Name</h3>
+               <span class="close-selector"></span>
+             </div>
+             <input id="mobile-search-course-finder" class="mobile-search-course-finder" type="text" placeholder="Enter a Course Name" />
+             <div class="search_autocomplete_course" style="display:none;"></div>
+          </div>
+          <div class="International-retreat-center-selector country-locator-phase2">
+              <div class="inner-switch-bar"><span class="inner-hide-selector"></span><h3>Select a Retreat Center</h3><span class="close-selector"></span></div>
+             <div class="International-retreat-center-list">
+              <ul>                
+                 <li><a href="/iaolc">Canada - Montreal</a></li>  
+                 <li><a href="/badantogast">Germany - Bad Antogast </a></li>
+                 <li><a href="https://www.happinessretreat.org">India - Bangalore</a></li>
+                 <li><a href="/intl-meditation-center-usa">USA - Boone, NC</a></li>
+              </ul>
+            </div>
+          </div>
+          
+           <div class="country-selector-gl country-locator-phase2">
+                  <div class="switch-bar"><span class="hide-selector"></span><h3>Find Courses</h3><span class="close-selector"></span></div>
+          </div> 
+          
+          
+          <div class="change-country-chapter-website-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>Find a Center</h3><span class="close-selector"></span></div>
+             <input id="mobile-country-chapter-finder" type="text" placeholder="Enter a location "/>
+              <ul class="country-chapters" style="display: none">
+<!--                  --><!--                      <li>-->
+<!--                        <a href="--><!--"> --><!--</a>-->
+<!--                      </li> -->              </ul>
+          </div>
+          <div  class="search-webiste-gl-p2 country-locator-phase2">
+            <div class="switch-bar"><span class="hide-selector"></span><h3>Search This Website</h3><span class="close-selector"></span></div>
+                                    <form class="search-form" action="/search/site" method="post" id="site-search-form-mobile" accept-charset="UTF-8">  
+              <input type="text" name="keys" placeholder="Search the site..." size="40" maxlength="255" class="form-text">
+              <button class="search-btn" id="footer-search-btn">
+                <i class="location-search-icon"></i>
+              </button>
+            </form>
+                      </div>
+
+        </div>
+        
+            <li class="DropdownMenu">
+      
+      </li>
+      <li id="mobile-country-list" class="hidden"></li>
+      <li id="bt-close" class="bt-close">X</li>
+    </ul>
+</div>
+              	<div class="lang_parent">
+       	<div class="LanguageSelection LanguageDiv"><ul class="megamenu"><li class="en first last Selected"><a href="/" class="language-link active" data-language="" data-lang-rev="en">English</a></li>
+</ul></div>        </div>
+               </div>
+  </div>
+  </nav>
+<!--header end-->
+          <div class="unity2-page-breadcrum unity2-pg-bc-menu">
+              <div class="breadcrumb"><div class="b-inner"><a href="/">Home</a><span> &rsaquo; </span><a href="/yoga">Yoga</a><span> &rsaquo; </span><a href="/archive/971">Patanjali Yoga Sutras</a></div></div>          </div>
+            <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="node-543512 node node-landing-pages-node clearfix">
+
+  <div style="position:relative"><div id="landing-pages-content" class="single-page template-u2_global"><div id="admin-element-0" class="place-holder   div_list div_1 PagePage_-1_of_1 div_PagePage  dragable-components">
+<div class="inner-holder"><div id="admin-element-71633" class="place-holder   div_list div_3 PageRow_1_of_3 theme-transparent-bg page-title-parent div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" height:100%;
+          
+           ;background-size: cover; background-position: center center;" class="row-inner-wrapper picturefill-background-scroll"><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg?itok=7GEVxDQV'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=7GEVxDQV' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg?itok=7GEVxDQV' data-media='(min-width: 300px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=7GEVxDQV' data-media='(min-width: 300px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg?itok=7GEVxDQV' data-media='(min-width: 767px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=7GEVxDQV' data-media='(min-width: 767px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg?itok=hA8L2VRR' data-media='(min-width: 992px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=hA8L2VRR' data-media='(min-width: 992px)' data-type='image/webp'></span><style>@media only screen and (max-width: 991px) { #admin-element-71633 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=7GEVxDQV);}} </style><style>@media only screen and (max-width: 766px) { #admin-element-71633 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header_mobile/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=7GEVxDQV);}} </style><style>@media only screen and (min-width: 992px) { #admin-element-71633 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/u2_page_header/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=hA8L2VRR);}} </style><div class="row-image-child"></div><div class="row-inner" ><div id="admin-element-71634" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-71635 class="div_PageTitleComponent div_list div_1 PageTitleComponent_1_of_1 page-element element-PageTitleComponent "><div class="page-title-component default">
+      <span class="taxonomy_parent_name">
+      <a href='/yoga' class=''>Yoga</a>    </span>
+    <h1 class="page_title " >
+    Story of Patanjali and the<br>  Gift of Yoga Knowledge      </h1>
+  
+
+
+   </div>
+
+
+
+
+
+
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-71636" class="place-holder   div_list div_3 PageRow_2_of_3 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" ><div id="admin-element-71637" class="place-holder   div_list div_2_1 PageColumn_1_of_2_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-71638 class="div_BodyComponent div_list div_2_1 BodyComponent_1_of_2_1 page-element element-BodyComponent ">
+<div class="body-component">
+<article>
+<div class="field-item even"><div class="addthis_sharing_toolbox"></div></div>  <div class="show_author_info_body"> </div><div class="field-item even"><h2>Patanjali Yoga Sutras Knowledge Sheet 1</h2>
+
+<p><picture><source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg.webp?itok=d-vkubbq" type="image/webp"></source><img loading="lazy" alt="Patanjali yoga sutras image" width="711" height="265" class="media-element file-default" src="/sites/www.artofliving.org/files/styles/original_image/public/wysiwyg_imageupload/patanjali-yoga-1183453969.jpg?itok=d-vkubbq" /></picture></p>
+
+<p>We will begin with a story, the greatest and most effective way of conveying knowledge. </p>
+
+<p>Once upon a time, long ago, all the Munis and Rishis approached Lord Vishnu to tell him that even though He (incarnated as Lord Dhanvanthari) had given them the means to cure illnesses through Ayurveda, people still fell ill. They also wanted to know what to do when people got sick. </p>
+
+<p>Sometimes it is not just physical illness, but mental and emotional illness too that needs to be dealt with. Anger, lust, greed, jealousy etc. How does one get rid of all these impurities? What is the formula? </p>
+
+<p>Vishnu was lying on the bed of snakes — the serpent Adishésha with a 1,000 heads. When the Rishis approached Him, He gave them Adishésha (the symbol of awareness), who took birth in the world as Maharishi Patanjali. </p>
+
+<p>Hence Patanjali came to this earth to give this knowledge of <a href="/yoga" title="Not allowed">yoga</a> which came to be known as the Yoga Sutras. </p>
+
+<p> Patanjali said that he was not going to discuss the <em>Yoga Sutras</em> unless 1,000  people got together. So 1,000 people gathered south of the <em>Vindhya  Mountains</em> to listen to him. </p>
+
+<p> Patanjali had another condition. He said that he would put a screen in-  between him and his students, and told them that nobody was to lift the  screen, or leave. Everybody had to stay in the hall till he finished. </p>
+
+<p>Patanjali stayed behind the curtain and he transmitted his knowledge to the 1,000 gathered, and each of them absorbed this knowledge. It was an amazing phenomenon, and even amongst the students, they could not believe how they were getting this knowledge. They could not believe how the master was making each of them understand the knowledge without uttering a single word from behind the curtain. </p>
+
+<p>Everybody was amazed. Each one of them experienced such a blast of energy, such a blast of enthusiasm, that they could not even contain it. But they still had to maintain the discipline. </p>
+
+<p>One little boy had to go out to attend nature's call. So he left the room. He thought to himself that he would go quietly and return quietly. Another person became curious, "What is the Master doing behind the curtain? I want to see." </p>
+
+<p>Does the boy lift the curtain? Find out in the next Wednesday in the next Patanjali Yoga knowledge sheet. </p>
+
+<p><span>What meaning have you unlocked from this story?</span> </p>
+
+<p>In this story, there is a lot of depth. The puranas do not give any explanation. They just give a story and it is for us to unlock the meaning. So what is that you all have to find out? </p>
+
+<ol><li>How did the master convey the knowledge to everybody without uttering a word? </li>
+<li>What was the significance of the veil? </li>
+</ol><p>This is the first in a series of articles<br />based on Gurudev Sri Sri Ravi Shankar’s commentary on Patanjali Yoga Sutras.</p>
+
+<div class="box-row"><div class="box-right-aligend-5 shadow-box"><div class="inner"><div class="shadow-box-content"><h4>Read introduction to Patanjali Yoga Sutras</h4>
+
+				<p><a href="/yoga/patanjali-yogasutra" title="Patanjali Yoga Sutras : Commentary by Gurudev">Patanjali Yoga Sutras : Commentary by Gurudev</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<p><span class="left">&lt;<a href="/yoga/patanjali-yogasutra" title="Patanjali Yoga Sutras : Commentary by Gurudev">Introduction to Patanjali Yoga Sutras</a></span></p>
+
+<p><span class="right"><a href="/yoga/patanjali-yogasutra/knowledge-sheet-2" title="Story of Patanjali and the Gift of Yoga Knowledge - Part 2">Story of Patanjali Part 2</a>&gt;&gt;</span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>(This is part of a series of knowledge sheets based on Gurudev Sri Sri Ravi Shankar's<a href="https://store.artofliving.org/in/search.aspx?q=patanjali%20yoga%20sutra&amp;T=0&amp;C=ALL" rel="nofollow" target="_blank"> commentaries on Patanjali Yoga Sutras</a>.)</p>
+</div><div class="cro_template_bottom"><ul class='taxonomy_tags check'><li><a href='/latest/yoga-2'><span class='taxonomy_tag'><span class='icon'><i></i></span><span class='name'>Yoga</span><span class='count'>202</span> </span></a></li><li><a href='/latest/5182'><span class='taxonomy_tag'><span class='icon'><i></i></span><span class='name'>patanjali yogasutra</span><span class='count'>73</span> </span></a></li><li><a href='/latest/5039'><span class='taxonomy_tag'><span class='icon'><i></i></span><span class='name'>knowledge sheet</span><span class='count'>69</span> </span></a></li></ul><div class="field-item even"><div class="addthis_sharing_toolbox"></div></div></div>  </article>
+</div>
+</div>                    
+        </div>                    
+</div>
+<div id="admin-element-71639" class="place-holder   div_list div_2_1 PageColumn_2_of_2_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-71817 class="div_MostPopularArticles div_list div_2 MostPopularArticles_1_of_2 page-element element-MostPopularArticles ">    <div class="most_popular_articles_form">
+  <form class="search-form" action="/node/652283" method="post" id="blog-search-form" accept-charset="UTF-8">
+    <input type="text" name="keys" placeholder="Search the Blog..." size="40" maxlength="255" class="form-text">
+    <button class="search-btn" id="blog-search-btn">
+      <i class="location-search-icon"></i>
+    </button>
+  </form>
+</div>
+<div class="most_popular_articles most_popular_articles_mob">
+  <span class="most_popular_articles_head">
+    Most Popular  </span>
+  <ul class="tabs" data-persist="true">
+            <li><a href="#view1">Popular</a></li>
+            <li><a href="#view2">Newest</a></li>
+      </ul>
+  <div class="tabcontents">
+          <div id="view1" class="views" style='display:block'>
+        <div class="most_popular_article no_cat_title">
+                        <div class="most_popular_article_row">
+              <div class="most_popular_article_image">
+                <a href="https://www.artofliving.org/yoga/yoga-benefits/top-ten-yoga-benefits">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-10-Health-Benefits-of-Yoga-in-Daily-Life.jpg.webp?itok=l-W_4rnE" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-10-Health-Benefits-of-Yoga-in-Daily-Life.jpg?itok=l-W_4rnE"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-10-Health-Benefits-of-Yoga-in-Daily-Life.jpg.webp?itok=tXe7bkqL" type="image/webp" /><img loading="lazy" alt="" width="565" height="280" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-10-Health-Benefits-of-Yoga-in-Daily-Life.jpg?itok=tXe7bkqL"></picture></span>
+                </a>
+              </div>
+              <div class="most_popular_article_details" >
+                <!--                   <span class="most_popular_article_parent">
+                                      </span>
+                 -->
+                                  <span class="most_popular_article_parent">
+                  <a href="https://www.artofliving.org/yoga/yoga-benefits/top-ten-yoga-benefits" class="theme_yellow-text"></a>
+                  </span>
+                                  <span class="most_popular_article_head default-text-hover">
+                  <a href="https://www.artofliving.org/yoga/yoga-benefits/top-ten-yoga-benefits">Benefits of Yoga</a>
+                </span>
+              </div>
+            </div>
+                            <div class="most_popular_article_row">
+              <div class="most_popular_article_image">
+                <a href="https://www.artofliving.org/11-yoga-beginners-tips">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-11-Yoga-for-Beginners-Tips.jpg.webp?itok=rv80NLWA" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-11-Yoga-for-Beginners-Tips.jpg?itok=rv80NLWA"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-11-Yoga-for-Beginners-Tips.jpg.webp?itok=TbqnTm6H" type="image/webp" /><img loading="lazy" alt="" width="565" height="280" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-11-Yoga-for-Beginners-Tips.jpg?itok=TbqnTm6H"></picture></span>
+                </a>
+              </div>
+              <div class="most_popular_article_details" >
+                <!--                   <span class="most_popular_article_parent">
+                                      </span>
+                 -->
+                                  <span class="most_popular_article_parent">
+                  <a href="https://www.artofliving.org/11-yoga-beginners-tips" class="theme_yellow-text"></a>
+                  </span>
+                                  <span class="most_popular_article_head default-text-hover">
+                  <a href="https://www.artofliving.org/11-yoga-beginners-tips">Yoga Tips for Beginners </a>
+                </span>
+              </div>
+            </div>
+                            <div class="most_popular_article_row">
+              <div class="most_popular_article_image">
+                <a href="https://www.artofliving.org/yoga/yoga-poses/yoga-poses-categories">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Yoga-Asanas-and-Their.jpg.webp?itok=6JU2maFD" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Yoga-Asanas-and-Their.jpg?itok=6JU2maFD"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Yoga-Asanas-and-Their.jpg.webp?itok=fkDcv2BE" type="image/webp" /><img loading="lazy" alt="" width="565" height="280" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Yoga-Asanas-and-Their.jpg?itok=fkDcv2BE"></picture></span>
+                </a>
+              </div>
+              <div class="most_popular_article_details" >
+                <!--                   <span class="most_popular_article_parent">
+                                      </span>
+                 -->
+                                  <span class="most_popular_article_parent">
+                  <a href="https://www.artofliving.org/yoga/yoga-poses/yoga-poses-categories" class="theme_yellow-text"></a>
+                  </span>
+                                  <span class="most_popular_article_head default-text-hover">
+                  <a href="https://www.artofliving.org/yoga/yoga-poses/yoga-poses-categories">All Yoga Poses Categories </a>
+                </span>
+              </div>
+            </div>
+                            <div class="most_popular_article_row">
+              <div class="most_popular_article_image">
+                <a href="https://www.artofliving.org/in-en/yoga/yoga-poses/sun-salutation">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Expand-Your-Horizons.jpg.webp?itok=ZJW-wTa4" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Expand-Your-Horizons.jpg?itok=ZJW-wTa4"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Expand-Your-Horizons.jpg.webp?itok=rTj-RBks" type="image/webp" /><img loading="lazy" alt="" width="565" height="280" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Expand-Your-Horizons.jpg?itok=rTj-RBks"></picture></span>
+                </a>
+              </div>
+              <div class="most_popular_article_details" >
+                <!--                   <span class="most_popular_article_parent">
+                                      </span>
+                 -->
+                                  <span class="most_popular_article_parent">
+                  <a href="https://www.artofliving.org/in-en/yoga/yoga-poses/sun-salutation" class="theme_yellow-text"></a>
+                  </span>
+                                  <span class="most_popular_article_head default-text-hover">
+                  <a href="https://www.artofliving.org/in-en/yoga/yoga-poses/sun-salutation">Surya Namaskar</a>
+                </span>
+              </div>
+            </div>
+                            <div class="most_popular_article_row">
+              <div class="most_popular_article_image">
+                <a href="https://www.artofliving.org/yoga/health-and-wellness/yoga-for-glowing-skin">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Yoga-for-Naturally.jpg.webp?itok=awpCfZE2" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/landing_pages/custom_promoted_article/new-Yoga-for-Naturally.jpg?itok=awpCfZE2"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Yoga-for-Naturally.jpg.webp?itok=maaTxn0W" type="image/webp" /><img loading="lazy" alt="" width="565" height="280" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_big/public/landing_pages/custom_promoted_article/new-Yoga-for-Naturally.jpg?itok=maaTxn0W"></picture></span>
+                </a>
+              </div>
+              <div class="most_popular_article_details" >
+                <!--                   <span class="most_popular_article_parent">
+                                      </span>
+                 -->
+                                  <span class="most_popular_article_parent">
+                  <a href="https://www.artofliving.org/yoga/health-and-wellness/yoga-for-glowing-skin" class="theme_yellow-text"></a>
+                  </span>
+                                  <span class="most_popular_article_head default-text-hover">
+                  <a href="https://www.artofliving.org/yoga/health-and-wellness/yoga-for-glowing-skin">Yoga for Skin Glow </a>
+                </span>
+              </div>
+            </div>
+                          <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/prison-program-south-africa">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/home_thumb/Prison.jpg.webp?itok=k-E4RHgx" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/home_thumb/Prison.jpg?itok=k-E4RHgx"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/home_thumb/Prison.jpg.webp?itok=Fgzqz8qr" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/home_thumb/Prison.jpg?itok=Fgzqz8qr"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/archive/0' class='-text'>Programs</a>                </span>
+                            <span class="most_popular_article_head -text-hover">
+                <a href="/prison-program-south-africa">Prison-Program - South Africa</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-poses/wind-relieving-pose">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Asana-for-Gas-and-Constipation-Problem.jpg.webp?itok=pJJSZpoL" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Asana-for-Gas-and-Constipation-Problem.jpg?itok=pJJSZpoL"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Asana-for-Gas-and-Constipation-Problem.jpg.webp?itok=kxmUUAxG" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Asana-for-Gas-and-Constipation-Problem.jpg?itok=kxmUUAxG"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-poses/wind-relieving-pose">Yoga asanas for gastric problems</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/meditation-thoughts">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/How-to-control-your-thoughts-during-meditation.jpg.webp?itok=fBvRVZlz" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/How-to-control-your-thoughts-during-meditation.jpg?itok=fBvRVZlz"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/How-to-control-your-thoughts-during-meditation.jpg.webp?itok=niF4_mAj" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/How-to-control-your-thoughts-during-meditation.jpg?itok=niF4_mAj"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/node/502348' class='theme_yellow-text'>Meditation</a>                </span>
+                            <span class="most_popular_article_head theme_yellow-text-hover">
+                <a href="/meditation-thoughts">How to control your thoughts during meditation </a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-for-beginners/yoga-home">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-at-Home.jpg.webp?itok=2Rx2jpKp" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-at-Home.jpg?itok=2Rx2jpKp"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-at-Home.jpg.webp?itok=10sU-6QF" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-at-Home.jpg?itok=10sU-6QF"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-for-beginners/yoga-home">Yoga at home </a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-benefits/top-ten-yoga-benefits">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Benefits-of.jpg.webp?itok=rOn8CpjG" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Benefits-of.jpg?itok=rOn8CpjG"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Benefits-of.jpg.webp?itok=UjyUZhWM" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Benefits-of.jpg?itok=UjyUZhWM"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-benefits/top-ten-yoga-benefits">The Benefits of Yoga</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/11-yoga-tips-beginners">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/11-Yoga-for-Beginners-Tips.jpg.webp?itok=jKqMktKx" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/11-Yoga-for-Beginners-Tips.jpg?itok=jKqMktKx"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/11-Yoga-for-Beginners-Tips.jpg.webp?itok=nI7qsKIz" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/11-Yoga-for-Beginners-Tips.jpg?itok=nI7qsKIz"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/11-yoga-tips-beginners">11 yoga tips for beginners</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-weight-loss">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/lose-weight_1_0.jpg.webp?itok=IMrD2qh4" type="image/webp" /><img loading="lazy" alt="yoga for weight loss" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/lose-weight_1_0.jpg?itok=IMrD2qh4"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/lose-weight_1_0.jpg.webp?itok=6Ue6x4_X" type="image/webp" /><img loading="lazy" alt="yoga for weight loss" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/lose-weight_1_0.jpg?itok=6Ue6x4_X"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-weight-loss">Lose weight with yoga</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-for-blood-pressure">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Blood-Pressure.jpg.webp?itok=WsqFEn8x" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Blood-Pressure.jpg?itok=WsqFEn8x"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Blood-Pressure.jpg.webp?itok=XfBIUsyL" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Blood-Pressure.jpg?itok=XfBIUsyL"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-for-blood-pressure">Yoga for blood pressure</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-eyes">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Eyes-Improve.jpg.webp?itok=EREXvvYT" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Eyes-Improve.jpg?itok=EREXvvYT"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Eyes-Improve.jpg.webp?itok=jVSppisF" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Eyes-Improve.jpg?itok=jVSppisF"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-eyes">Yoga for eyes: improve eyesight naturally</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-poses/yoga-poses-categories">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Asanas-and-Their.jpg.webp?itok=qKUPiu46" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Asanas-and-Their.jpg?itok=qKUPiu46"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Asanas-and-Their.jpg.webp?itok=0rH13Mxu" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Asanas-and-Their.jpg?itok=0rH13Mxu"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-poses/yoga-poses-categories">Yoga Asanas and Their Poses for Beginners</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/sun-salutation">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/720-sunsalutation.jpg.webp?itok=4YDg5KNp" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/720-sunsalutation.jpg?itok=4YDg5KNp"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/720-sunsalutation.jpg.webp?itok=cHnGABvg" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/720-sunsalutation.jpg?itok=cHnGABvg"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/yoga' class='default-text'>Yoga</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/sun-salutation">How To Do Surya Namaskar</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/going-green-canada">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/home_thumb/art-of-living-at-work-3.jpg.webp?itok=_k7-Qp6t" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/home_thumb/art-of-living-at-work-3.jpg?itok=_k7-Qp6t"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/home_thumb/art-of-living-at-work-3.jpg.webp?itok=9q-hAkwQ" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/home_thumb/art-of-living-at-work-3.jpg?itok=9q-hAkwQ"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                              <span class="most_popular_article_parent">
+                  <a href='/service-projects' class='default-text'>Projects</a>                </span>
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/going-green-canada">Going green in Canada</a>
+              </span>
+                            
+            </div>
+            </div>
+                  </div>
+      </div>
+          <div id="view2" class="views" style='display:block'>
+        <div class="most_popular_article ">
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-and-lifestyle/yoga-for-children">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/achievement_carousel_image/Untitled-2.jpg.webp?itok=wwKC3mzX" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/achievement_carousel_image/Untitled-2.jpg?itok=wwKC3mzX"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/achievement_carousel_image/Untitled-2.jpg.webp?itok=Yv8626_n" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/achievement_carousel_image/Untitled-2.jpg?itok=Yv8626_n"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-and-lifestyle/yoga-for-children">Yoga for Children: Playing in Childhood’s Sun </a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-for-glowing-skin">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Naturally.jpg.webp?itok=L0gB3GP9" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-for-Naturally.jpg?itok=L0gB3GP9"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Naturally.jpg.webp?itok=xqjMmhPO" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-for-Naturally.jpg?itok=xqjMmhPO"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-for-glowing-skin">Yoga Tips for naturally glowing skin </a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-for-anxiety-disorder">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/9-Yoga-Tips-to-Overcome.jpg.webp?itok=cAfhXCBD" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/9-Yoga-Tips-to-Overcome.jpg?itok=cAfhXCBD"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/9-Yoga-Tips-to-Overcome.jpg.webp?itok=xU2OtNYl" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/9-Yoga-Tips-to-Overcome.jpg?itok=xU2OtNYl"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-for-anxiety-disorder">9 Yoga Tips to Overcome Anxiety disorder</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-for-women/yoga-for-pcos">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Can-Help-PCOS.jpg.webp?itok=4DBZRF0a" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Can-Help-PCOS.jpg?itok=4DBZRF0a"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Can-Help-PCOS.jpg.webp?itok=U-MBBsey" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Can-Help-PCOS.jpg?itok=U-MBBsey"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-for-women/yoga-for-pcos">Yoga can help PCOS</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/yoga-for-neck-pain">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/7-Simple-Yoga-Poses-to.jpg.webp?itok=9ZRkwfN_" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/7-Simple-Yoga-Poses-to.jpg?itok=9ZRkwfN_"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/7-Simple-Yoga-Poses-to.jpg.webp?itok=N9fq1hw2" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/7-Simple-Yoga-Poses-to.jpg?itok=N9fq1hw2"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/yoga-for-neck-pain">7 Simple Yoga Asanas for Neck Pain Relief</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/Overpowering-asthma-with-yoga">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/achievement_carousel_image/Overpowering-Asthma-with-yoga.jpg.webp?itok=gTz7JUIY" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/achievement_carousel_image/Overpowering-Asthma-with-yoga.jpg?itok=gTz7JUIY"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/achievement_carousel_image/Overpowering-Asthma-with-yoga.jpg.webp?itok=WZ1l-6cM" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/achievement_carousel_image/Overpowering-Asthma-with-yoga.jpg?itok=WZ1l-6cM"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/Overpowering-asthma-with-yoga">Overpowering Asthma with yoga</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-for-beginners/7-tips-to-improve-your-golf-experience">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/7-Tips-to-Improve-Your.jpg.webp?itok=ATbEk5gD" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/7-Tips-to-Improve-Your.jpg?itok=ATbEk5gD"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/7-Tips-to-Improve-Your.jpg.webp?itok=A94h2hNv" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/7-Tips-to-Improve-Your.jpg?itok=A94h2hNv"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-for-beginners/7-tips-to-improve-your-golf-experience"> 7 tips to improve your golf experience</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/cure-thyroid-with-yoga">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/How-To-Cure-Thyroid-With-Yoga_0.jpg.webp?itok=QtASQYV4" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/How-To-Cure-Thyroid-With-Yoga_0.jpg?itok=QtASQYV4"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/How-To-Cure-Thyroid-With-Yoga_0.jpg.webp?itok=Epub9TKh" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/How-To-Cure-Thyroid-With-Yoga_0.jpg?itok=Epub9TKh"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/cure-thyroid-with-yoga">"How To Cure Thyroid With Yoga or "How to cure thyroid with yoga?"</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/health-and-wellness/mudras-yoga-at-fingertips">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg.webp?itok=9BDPd4hR" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg?itok=9BDPd4hR"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg.webp?itok=90q9s4vj" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg?itok=90q9s4vj"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/health-and-wellness/mudras-yoga-at-fingertips">Yoga Mudra at your fingertips!</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/lying-down-body-twist-chakrasana">
+                  <span class="display-desktop"></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg.webp?itok=90q9s4vj" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/unity2/blog_image/Yoga-Mudra-at-your-fingertips%21.jpg?itok=90q9s4vj"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/lying-down-body-twist-chakrasana">Lying-down Body Twist (Chakrasana)</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/yoga-1_3.jpg.webp?itok=nwqZxrF_" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/yoga-1_3.jpg?itok=nwqZxrF_"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/yoga-1_3.jpg.webp?itok=6GIMh89Q" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/yoga-1_3.jpg?itok=6GIMh89Q"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga">Yoga : What is Yoga?</a>
+              </span>
+                            
+            </div>
+            </div>
+                      <div class="most_popular_article_row">
+                          <div class="most_popular_article_image">
+                <a href="/yoga/yoga-poses/butterfly-pose-badhakonasana">
+                  <span class="display-desktop"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/butterfly-pose-badhakonasana.jpg.webp?itok=y2TvfZwS" type="image/webp" /><img loading="lazy" alt="" width="120" height="80" class=""  src="/sites/www.artofliving.org/files/styles/unity_plus_articles_thumb/public/butterfly-pose-badhakonasana.jpg?itok=y2TvfZwS"></picture></span>
+                  <span class="display-mob"><picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/butterfly-pose-badhakonasana.jpg.webp?itok=caGlI6jN" type="image/webp" /><img loading="lazy" alt="" width="520" height="330" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_featured/public/butterfly-pose-badhakonasana.jpg?itok=caGlI6jN"></picture></span>
+                </a>
+              </div>
+                        <div class="most_popular_article_details ">
+                            <span class="most_popular_article_head default-text-hover">
+                <a href="/yoga/yoga-poses/butterfly-pose-badhakonasana">Butterfly Pose (Badhakonasana)</a>
+              </span>
+                            
+            </div>
+            </div>
+                  </div>
+      </div>
+      </div>
+</div>
+</div>                    
+<div id="admin-element-71641" class="place-holder   div_list div_2 PageInnerRow_2_of_2 div_PageInnerRow  dragable-components">
+<div class="inner-holder"><div  style=" height:100%;
+          
+           ;background-size: cover; background-position: center center;" class="row-inner-wrapper picturefill-background-scroll"><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg?itok=BYxIhb56'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg?itok=BYxIhb56' data-media='(min-width: 300px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56' data-media='(min-width: 300px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg?itok=BYxIhb56' data-media='(min-width: 767px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56' data-media='(min-width: 767px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg?itok=BYxIhb56' data-media='(min-width: 992px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56' data-media='(min-width: 992px)' data-type='image/webp'></span><style>@media only screen and (max-width: 991px) { #admin-element-71641 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56);}} </style><style>@media only screen and (max-width: 766px) { #admin-element-71641 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56);}} </style><style>@media only screen and (min-width: 992px) { #admin-element-71641 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/subscribe_5_5.jpg.webp?itok=BYxIhb56);}} </style><div class="row-image-child"></div><div class="row-inner" ><div id="admin-element-71642" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-71643 class="div_FormComponent div_list div_1 FormComponent_1_of_1 page-element element-FormComponent ">
+
+
+<div class="form-component  " style="background-color: ">
+	<div class="block form-component-inner"> 
+          <h2>SUBSCRIBE</h2>
+         
+    <div
+			id="webform-top-wrap-520019">
+      <div id="webform-ajax-wrapper-520019"><form class="webform-client-form webform-hints children-5 form-with-privacy-policy" enctype="multipart/form-data" action="https://www.artofliving.org/webform-post" method="post" id="webform-client-form-520019" accept-charset="UTF-8"><div><div
+  class=" inline-form-container contextual-links-region">
+  <div class="inline-form">
+<div class="form-item webform-component webform-component-textfield" id="webform-component-name">
+  <label class="element-invisible" for="edit-submitted-name">first name <span class="form-required" title="This field is required.">*</span></label>
+ <input title="first name*" label="first name*" class="webform-hints-field form-text required" placeholder="first name*" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-email" id="webform-component-email">
+  <label class="element-invisible" for="edit-submitted-email">email address <span class="form-required" title="This field is required.">*</span></label>
+ <input class="webform-hints-field form-text form-email required" title="email address*" label="email address*" placeholder="email address*" type="email" id="edit-submitted-email" name="submitted[email]" size="60" />
+</div>
+<div class="form-item webform-component webform-component-select" id="webform-component-counties-without-eu">
+  <label class="element-invisible" for="edit-submitted-counties-without-eu">Country <span class="form-required" title="This field is required.">*</span></label>
+ <select id="edit-submitted-counties-without-eu" name="submitted[counties_without_eu]" class="form-select required"><option value="">Country*</option><option value="af">Afghanistan</option><option value="al">Albania</option><option value="dz">Algeria</option><option value="ao">Angola</option><option value="ai">Anguilla</option><option value="ag">Antigua</option><option value="ar">Argentina</option><option value="am">Armenia</option><option value="aw">Aruba</option><option value="au">Australia</option><option value="az">Azerbaijan</option><option value="bh">Bahrain</option><option value="bd">Bangladesh</option><option value="bb">Barbados</option><option value="by">Belarus</option><option value="bz">Belize</option><option value="bt">Bhutan</option><option value="bo">Bolivia</option><option value="ba">Bosnia and Herzegovina</option><option value="bw">Botswana</option><option value="br">Brazil</option><option value="bn">Brunei</option><option value="bf">Burkina Faso</option><option value="kh">Cambodia</option><option value="cm">Cameroon</option><option value="ca">Canada</option><option value="td">Chad</option><option value="cl">Chile</option><option value="cn">China</option><option value="co">Colombia</option><option value="cg">Congo (Brazzaville)</option><option value="cr">Costa Rica</option><option value="cw">Curacao</option><option value="dm">Dominica</option><option value="do">Dominican Republic</option><option value="tl">East Timor</option><option value="ec">Ecuador</option><option value="eg">Egypt</option><option value="sv">El Salvador</option><option value="et">Ethiopia</option><option value="eu">Europe</option><option value="fj">Fiji</option><option value="ga">Gabon</option><option value="gm">Gambia</option><option value="ge">Georgia</option><option value="gh">Ghana</option><option value="gt">Guatemala</option><option value="gy">Guyana</option><option value="ht">Haiti</option><option value="hk">Hong Kong</option><option value="in">India</option><option value="id">Indonesia</option><option value="iq">Iraq</option><option value="il">Israel</option><option value="ci">Ivory Coast</option><option value="jm">Jamaica</option><option value="jp">Japan</option><option value="jo">Jordan</option><option value="kz">Kazakhstan</option><option value="ke">Kenya</option><option value="ks">Kosovo</option><option value="kw">Kuwait</option><option value="kg">Kyrgyzstan</option><option value="la">Laos</option><option value="lb">Lebanon</option><option value="lr">Liberia</option><option value="ly">Libya</option><option value="mk">Macedonia</option><option value="mg">Madagascar</option><option value="mw">Malawi</option><option value="my">Malaysia</option><option value="mv">Maldives</option><option value="ml">Mali</option><option value="mu">Mauritius</option><option value="mx">Mexico</option><option value="md">Moldova</option><option value="mc">Monaco</option><option value="mn">Mongolia</option><option value="me">Montenegro</option><option value="ma">Morocco</option><option value="mz">Mozambique</option><option value="mm">Myanmar</option><option value="na">Namibia</option><option value="np">Nepal</option><option value="nz">New Zealand</option><option value="ni">Nicaragua</option><option value="ng">Nigeria</option><option value="om">Oman</option><option value="ps">Palestine</option><option value="pa">Panama</option><option value="pg">Papua New Guinea</option><option value="py">Paraguay</option><option value="pe">Peru</option><option value="ph">Philippines</option><option value="pr">Puerto Rico</option><option value="qa">Qatar</option><option value="ru">Russia</option><option value="rw">Rwanda</option><option value="lc">Saint Lucia</option><option value="sm">San Marino</option><option value="sa">Saudi Arabia</option><option value="sn">Senegal</option><option value="rs">Serbia</option><option value="sc">Seychelles</option><option value="sg">Singapore</option><option value="sx">Sint Maarten</option><option value="za">South Africa</option><option value="kr">South Korea</option><option value="lk">Sri Lanka</option><option value="sd">Sudan</option><option value="sr">Suriname</option><option value="sz">Swaziland</option><option value="tw">Taiwan</option><option value="tj">Tajikistan</option><option value="tz">Tanzania</option><option value="th">Thailand</option><option value="tg">Togo</option><option value="tt">Trinidad and Tobago</option><option value="tn">Tunisia</option><option value="tr">Turkey</option><option value="tm">Turkmenistan</option><option value="ug">Uganda</option><option value="ua">Ukraine</option><option value="ae">United Arab Emirates</option><option value="us">United States</option><option value="uy">Uruguay</option><option value="uz">Uzbekistan</option><option value="ve">Venezuela</option><option value="vn">Vietnam</option><option value="ye">Yemen</option><option value="zm">Zambia</option><option value="zw">Zimbabwe</option></select>
+</div>
+
+      <div class='email-phone field-info-icon'> 
+        <div class='info-icon'>
+          <div class='tiptip-content' id='info-dropdown-tooltip'>
+            <div id='webform-component-info-dropdown' class='form-item webform-component webform-component-markup'>
+              <p>
+                EEA countries and Switzerland are not available to select due to GDPR (European data privacy law)
+              </p>
+            </div>
+          </div>
+          <a title='' class='tiptip-help' id='info-dropdown' onclick='return false;'>
+            <img src='/sites/all/themes/aol-zen/images/info_icon.png' />
+          </a>
+      </div>
+    </div><div class="form-item webform-component webform-component-checkboxes" id="webform-component-terms-of-use">
+  <label for="edit-submitted-terms-of-use"> <span class="form-required" title="This field is required.">*</span></label>
+ <div id="edit-submitted-terms-of-use" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-submitted-terms-of-use-3">
+ <input type="checkbox" id="edit-submitted-terms-of-use-1" name="submitted[terms_of_use][3]" value="3" class="form-checkbox" />  <label class="option" for="edit-submitted-terms-of-use-1">I agree to the <a href='/api/content.php?nid=331394&amp;language=en' id='terms-title2' class='terms-title nyro-popup 262'>Privacy Policy</a>. </label>
+
+</div>
+</div>
+ <div class="description"><a href='/api/content.php?nid=331394&language=en' id='terms-title2' class='terms-title nyro-popup 243'>By agreeing to the Terms of Use, I am willing to receive emails from The Art of Living about our Future Programs.</a></div>
+</div>
+ <div class="clearfix"> </div> <input type="hidden" name="submitted[language_name]" value="English" />
+<input type="hidden" name="submitted[page_title]" value="Story of Patanjali and the Gift of Yoga Knowledge" />
+<input type="hidden" name="submitted[alias]" value="yoga/patanjali-yogasutra/knowledge-sheet-1" />
+<input type="hidden" name="submitted[error_id]" value="#clientsidevalidation-webform-client-form-520019-errors" />
+<input type="hidden" name="submitted[referal_page]" value="" />
+<input type="hidden" name="submitted[external_url_aol]" />
+<input type="hidden" name="submitted[aol_landing_page]" />
+<input type="hidden" name="submitted[website_section_form]" value="207" />
+<input type="hidden" name="submitted[language]" value="en" />
+<input type="hidden" name="submitted[hidden_country_code]" value="global" />
+<input type="hidden" name="submitted[utm_id]" value="" />
+<input type="hidden" name="submitted[utm_source]" value="" />
+<input type="hidden" name="submitted[utm_medium]" value="" />
+<input type="hidden" name="submitted[utm_campaign]" value="" />
+<input type="hidden" name="submitted[utm_content]" value="" />
+<input type="hidden" name="submitted[utm_ref]" value="www.artofliving.org/yoga/patanjali-yogasutra/knowledge-sheet-1" />
+<input type="hidden" name="submitted[utm_term]" value="" />
+<input type="hidden" name="submitted[ip_address]" value="172.30.0.70" />
+<input type="hidden" name="submitted[webformurl]" value="/node/520019" />
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-06k-sv-8o1khdd7-oUA564YdUuYu7s7JR3WOOTz2iiM" />
+<input type="hidden" name="form_id" value="webform_client_form_520019" />
+<input type="hidden" name="webform_ajax_wrapper_id" value="webform-ajax-wrapper-520019" />
+<input type="hidden" name="nid" value="520019" />
+<div class="form-actions form-wrapper" id="edit-actions"><button id="edit-webform-ajax-submit-520019" type="submit" name="op" value="Subscribe " class="form-submit" ><span>Subscribe </span></button></div>         <!-- popform ends here -->
+    </div>
+
+  </div>
+</div></form></div>                        
+		</div>
+	</div>
+</div>
+
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-177793" class="place-holder   div_list div_3 PageRow_3_of_3 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" ><div id="admin-element-177794" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-177795 class="div_BlogPromotedArticlesComponent div_list div_1 BlogPromotedArticlesComponent_1_of_1 page-element element-BlogPromotedArticlesComponent "><!--other Entry Level Programs-->
+ 
+<div class="blog_promoted_content   layoyt-3_3 promoted-blog-articles blog_load_more  " layout="3_3">
+	  <input type="hidden" name="blog_query_177795" value="{&quot;type&quot;:&quot;content&quot;,&quot;format&quot;:&quot;json&quot;,&quot;language&quot;:&quot;en&quot;,&quot;status&quot;:1,&quot;sort&quot;:&quot;ds_changed+desc&quot;,&quot;count&quot;:6,&quot;fields&quot;:{&quot;bundle&quot;:&quot;aolweb_page,course_type_page,aol_gallery&quot;,&quot;im_taxonomy_vocabulary_4&quot;:&quot;209,209,508,726,510,1051,509,1095,730,2304,1054,971,1052,731,1053,520,727,729,1325,733,734,2305,732&quot;,&quot;-entity_id&quot;:&quot;1537,1585,1596,1668,1686,1711,1718,1719,1723,1726,1728,2384,66220,203346,204218,215610,236102,274695,292128,307096,323631,1534,1565,1632,71138&quot;}}" id="blog_query_177795">
+  <input type="hidden" name="blog_parent_tids_177795" value="209" id="blog_parent_tids_177795">
+  <input type="hidden" name="blog_layout_177795" value="3_3" id="blog_layout_177795">
+  <span class="promoted-main-title">Popular Yoga Articles</span>  <div class="list  blog_featured17779573210 blog_main_featured17779573210 blog_featured_color17779573210 2_big_with_carousal_id17779573210 "      >
+            <div class="  without-caro-item ">
+                          <a href="/yoga/patanjali-yogasutra/knowledge-sheet-56" class="promoted-img ">
+                        <img src="/sites/all/themes/landing-page/images/custom/fly.jpg" alt="" width="370" height="235"/></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/patanjali-yogasutra/knowledge-sheet-56">Your Five Sources of Misery</a></h3>
+                          <p class="promoted-desc ">Patanjali Yoga Sutra Knowledge Sheet 56 Contd. from "Sukha anushayi...</p>
+                                     
+          </div>
+                  </div>
+            <div class="  without-caro-item ">
+                          <a href="/yoga/patanjali-yogasutra/knowledge-sheet-55" class="promoted-img ">
+                        <picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/pathanjali-6.jpg.webp?itok=uE2mWRAs" type="image/webp" /><img loading="lazy" alt="" width="370" height="235" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/pathanjali-6.jpg?itok=uE2mWRAs"></picture></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/patanjali-yogasutra/knowledge-sheet-55">Ignorance is the root cause of Suffering</a></h3>
+                          <p class="promoted-desc ">Patanjali Yoga Sutra Knowledge Sheet 55 Contd. from Ignorance...</p>
+                                     
+          </div>
+                  </div>
+            <div class="  without-caro-item ">
+                          <a href="/yoga/yoga-for-beginners/breathe-out-exam-stress" class="promoted-img ">
+                        <picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/girl-meditattion-.jpg.webp?itok=1vLbq0hU" type="image/webp" /><img loading="lazy" alt="" width="370" height="235" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/girl-meditattion-.jpg?itok=1vLbq0hU"></picture></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/yoga-for-beginners/breathe-out-exam-stress">Breathe Out Exam Stress</a></h3>
+                          <p class="promoted-desc ">Sore eyes, out of the bed look, a stack of rough notes, sample...</p>
+                                     
+          </div>
+                  </div>
+            <div class="  without-caro-item ">
+                          <a href="/yoga/patanjali-yogasutra/knowledge-sheet-54" class="promoted-img ">
+                        <picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/pys_54.jpg.webp?itok=BTWTizTs" type="image/webp" /><img loading="lazy" alt="" width="370" height="235" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/pys_54.jpg?itok=BTWTizTs"></picture></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/patanjali-yogasutra/knowledge-sheet-54">Without Love, Spiritual Path Becomes Dry</a></h3>
+                          <p class="promoted-desc ">Patanjali Yoga Sutra Knowledge Sheet 54 Contd. from Without love,...</p>
+                                     
+          </div>
+                  </div>
+            <div class="  without-caro-item ">
+                          <a href="/yoga/patanjali-yogasutra/knowledge-sheet-53" class="promoted-img ">
+                        <picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/budha_1.jpg.webp?itok=6AZaS6AU" type="image/webp" /><img loading="lazy" alt="" width="370" height="235" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/budha_1.jpg?itok=6AZaS6AU"></picture></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/patanjali-yogasutra/knowledge-sheet-53">The Veils of Misery</a></h3>
+                          <p class="promoted-desc ">Patanjali Yoga Sutra Knowledge Sheet 53 Contd. from We are talking...</p>
+                                     
+          </div>
+                  </div>
+            <div class="  without-caro-item ">
+                          <a href="/yoga/yoga-for-beginners/kamlesh-barwal-yoga-for-a-cause" class="promoted-img ">
+                        <picture >
+                <source srcset="https://www.artofliving.org/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/kamlesh-11.jpg.webp?itok=CmmcTAxr" type="image/webp" /><img loading="lazy" alt="" width="370" height="235" class=""  src="/sites/www.artofliving.org/files/styles/blog_promoted_grid/public/kamlesh-11.jpg?itok=CmmcTAxr"></picture></a>
+                    
+                    <div class="promoted-main">
+                              <span class="promoted-tag theme-common-bg promoted-link default-background"><a href='/yoga' class=''>Yoga</a></span>
+                        
+            <h3 class="promoted-title default-text-hover"><a href="/yoga/yoga-for-beginners/kamlesh-barwal-yoga-for-a-cause">Teaching Yoga for a Cause: Kamlesh Barwal</a></h3>
+                          <p class="promoted-desc ">From wearing many hats to teaching the world the art to de-stress...</p>
+                                     
+          </div>
+                  </div>
+      </div>
+  	  <div class="blog_promoted_load_more" id="blog_promoted_load_more_177795">
+	  	<span class="load_more" data-main-id="177795">load more</span>
+	  </div>
+	
+</div>
+
+<input type="hidden" class="blog_nin" name="blog_nin_177795" value="1537,1585,1596,1668,1686,1711,1718,1719,1723,1726,1728,2384,66220,203346,204218,215610,236102,274695,292128,307096,323631,1534,1565,1632,71138,232947,229486,228060,217626,216083,215747" id="blog_nin_1">
+<input type="hidden" name="nav_desktop_177795" value="1" id="nav_desktop_177795">
+<input type="hidden" name="nav_tablet_177795" value="1" id="nav_tablet_177795">
+<input type="hidden" name="nav_mobile_177795" value="0" id="nav_mobile_177795">
+<input type="hidden" name="uniq_cls_id_177795" value="17779573210" id="uniq_cls_id_177795">
+  
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+        </div>                    
+</div>
+</div></div>
+</div><!-- /.node -->
+  </div>
+</div>
+  </div>
+
+          
+<!--footer-->
+<div class="mobile-12 footerhome">
+  <div class="container">
+    <div class="web-inp-4 bod pad-0 hidden-xs hidden-sm">
+      <div class="mobile-12 pad-0">
+        <h3 class="cnct">
+                    <a href=""></a>
+        </h3>
+                   <p class="contact_num"><a href="mailto:info@artofliving.org" class="track_call">info@artofliving.org</a></p>
+                        <ul class="social mar-t-10">
+                      <li><a title="Sri Sri Ravi Shankar" target="_blank" href="http://twitter.com/srisri" ><i class="icon25 twt_icon"></i></a></li>
+                                <li><a title="" target="_blank" href="http://www.facebook.com/TheArtOfLivingGlobal"><i class="icon25 fb_icon"></i></a></li>
+                                <!--<li><a title="" target="_blank" href="http://plus.google.com/u/0/+SriSriRaviShankar/posts" ><i class="icon25 gplus_icon"></i></a></li>-->
+                                <li><a title="" target="_blank" href="http://www.youtube.com/artoflivingtv"><i class="icon25 ytube_icon"></i></a></li>
+                                      </ul>
+      </div>
+            <div class="mobile-12 mar-t-20 mar-b-20 pad-0">
+      <!--This script is used for facebook-->
+<div id="fb-root"></div>
+<script type="js-postload">(function(d, s, id, $) {
+  $( window ).on("scroll.social", function() {
+    load_social();              
+    $(this).off('scroll.social');
+  });
+  
+  function load_social(){     
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  
+}(document, 'script', 'facebook-jssdk', jQuery));</script>
+<!--This script is used for facebook-->
+        <!--This is for fb button-->
+        <div class="fb-like"
+          data-href="https://www.facebook.com/artofliving"
+          data-width="100" data-layout="standard" data-action="like"
+          data-show-faces="false" data-share="false"></div>
+        <!--This is for fb button-->
+
+        <!--This is for twitter button-->
+        <a href="https://twitter.com/srisri" class="twitter-follow-button"
+          data-show-count="true" data-lang ='en' >Follow @srisri</a>
+          <script type="js-postload">!function(d,s,id, $){
+          $( window ).on("scroll.social2", function() {
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}
+                          
+            $(this).off('scroll.social2');
+          });
+          }(document, 'script', 'twitter-wjs', jQuery);</script>
+        <!--This is for twitter button-->
+      </div>
+			      <div class="mobile-12 pad-0 find-center-course 1">
+      
+      	        <a class="find-course-btn" href="/search/course">
+          <div class="find_cou_center">
+            <i class="icon20 find_crs_icon"></i> <span>find a course</span>
+          </div>
+        </a> 
+                <a class="find-course-btn" href="/search/center">
+          <div class="find_cou_center">
+            <i class="icon20 find_center_icon"></i> <span>find a center</span>
+          </div>
+        </a> 
+              </div>
+    </div>
+
+    <div class="web-wid-8 pad-0 unity_footer_main">
+      <div class="mobile-12 pad-0 unity_footer">        
+        <div class="mobile-12 pad-0 unity_footer_left">
+          <div class="unity_mobile_footer_main">
+            <ul class="unity_mobile_footer"></ul>
+          </div>
+    			          <a href="/search/course" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_crs_icon"></i><span>find a course</span></div></a>
+                    <a href="/search/center" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_center_icon"></i><span>find a center</span></div></a>
+                    
+          <span class="footer_call_tab">talk to a teacher:<a href="tel:+91 8067612345​" class="track_call">+91 8067612345​</a></span>
+        </div> 
+        <div class="mobile-12 pad-0 unity_footer_right">
+          <div class="footer_right_head"><span>main menu</span></div>
+          <div class="unity_footer_right_left">
+            <ul class="unity_footer_menu"></ul>
+          </div>
+                                 <span class="footer_call_mobile"><a href="mailto:info@artofliving.org" class="track_call">info@artofliving.org</a></span>
+                              <div class="unity_footer_social">
+            <ul class="social mar-t-10">
+                              <li><a href="http://twitter.com/srisri"><i class="icon25 twt_icon"></i></a></li>
+                                            <li><a href="http://www.facebook.com/TheArtOfLivingGlobal"><i class="icon25 fb_icon"></i></a></li>
+                                                      <!--<li><a href="http://plus.google.com/u/0/+SriSriRaviShankar/posts"><i class="icon25 gplus_icon"></i></a></li>-->
+                                            <li><a href="http://www.youtube.com/artoflivingtv"><i class="icon25 ytube_icon"></i></a></li>
+                          </ul>
+                        <div class="social_count">
+              <!--This script is used for facebook-->
+              <div id="fb-root"></div>
+            
+              <!--This script is used for facebook-->
+              <!--This is for fb button-->
+              <div class="fb-like"
+                data-href="https://www.facebook.com/artofliving"
+                data-width="100" data-layout="standard" data-action="like"
+                data-show-faces="false" data-share="false">
+              </div>
+              <!--This is for fb button-->
+      
+              <!--This is for twitter button-->
+              <a href="https://twitter.com/srisri" class="twitter-follow-button"
+                data-show-count="true" data-lang ='en' >Follow @srisri</a>
+              
+              <!--This is for twitter button-->
+            </div>
+                      </div>
+        </div>
+        <!--only mobile end-->
+      </div>
+      
+      <div class="mobile-12 pad-0 hidden-xs hidden-sm">
+                    <div class="web-inp-4 footer-nav">
+                        
+            <h4 class="black"><a href="/programs">programs</a></h4>
+  <a href="/happiness-program" class="" title="" data-text="the meditation &amp; breath workshop">the meditation & breath workshop</a><a href="/sahaj-samadhi-meditation" class="" title="" data-text="sahaj samadhi meditation">sahaj samadhi meditation</a><a href="/yoga/srisriyoga" class="" title="" data-text="sri sri yoga">sri sri yoga</a><a href="/art-silence-retreat" class="" title="" data-text="art of silence retreat">art of silence retreat</a><a href="/practice-groups" class="" title="" data-text="practice groups">practice groups</a>                        </div>
+                      <div class="web-min-3 footer-nav">
+                        
+            <h4 class="black"><a href="/about-us">art of living</a></h4>
+  <a href="/about-us" class="" title="" data-text="about us">about us</a><a href="/press" class="" title="" data-text="press">press</a><a href="/sudarshan-kriya" class="" title="" data-text="research">research</a><a href="https://www.artoflivingstore.us" class="" data-text="bookstore" title="" target="_blank">bookstore</a><a href="/service-projects" class="" title="" data-text="service projects">service projects</a>                        </div>
+                      <div class="web-min-3 footer-nav">
+                        
+            <h4 class="black"><a href="/founder">gurudev</a></h4>
+  <a href="/biography" class="" title="" data-text="biography">biography</a><a href="/wisdom" class="" title="" data-text="wisdom">wisdom</a><a href="/srisriontour" class="" title="" data-text="tour schedule">tour schedule</a><a href="/founder#videos" class="" data-text="videos" title="">videos</a><a href="/awards-and-honors-sri-sri-ravi-shankar" class="" data-text="awards &amp; honors" title="">awards &amp; honors</a>                        </div>
+                      <div class="web-min-2 footer-nav">
+                        
+            <h4 class="black"><a href="/blog">blog</a></h4>
+  <a href="/lifestyle" class="" title="" data-text="lifestyle">lifestyle</a><a href="/yoga" class="" title="" data-text="yoga">yoga</a><a href="/meditation" class="" title="" data-text="meditation">meditation</a><a href="/spirituality" class="" title="" data-text="spirituality">spirituality</a><a href="/sri-sri" class="" title="" data-text="gurudev&#039;s blog">gurudev's blog</a>                        </div>
+                <!-- //     <div class="footer_form"> -->
+                 <!-- //     </div> -->
+                   
+      </div>
+
+      <div class="mobile-12 pad-0 hidden-xs hidden-sm webform_footer">
+              </div>
+
+                        <div class ="newsletter_sec form-inline mobile-12 pad-0">
+        <form class="search-form" action="/node/652283" method="post" id="footer-search-form" accept-charset="UTF-8">  
+          <input type="text" name="keys" placeholder="Search the site..." size="40" maxlength="255" class="form-text">
+          <button class="search-btn" id="footer-search-btn">
+            <i class="location-search-icon"></i>
+          </button>
+        </form>
+      </div>
+        </div>
+  </div>
+    <!--<img src="sites/all/themes/unity2/img/banners/footer.png" class="footer_banner unity_footer" />-->
+  
+  <div class="row">
+    <div class="container copyright_footer">
+      <div class="mobile-12 mar-t-30 pad-0 copyright">
+        <div class="mob-f-l pad-0 ">&copy; 2023 Art of Living </div>
+        <div class="mob-f-r pad-0">
+        	                    <a href="https://www.artofliving.org/privacy-policy" target="_blank">Privacy Policy</a> 
+          <a href="/cookie-policy" target="_blank">Cookie Policy</a>          <a href="https://www.artofliving.org/terms-of-use" target="_blank">Terms of Use</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer end-->
+
+      <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "The Art of Living",
+        "url": "https://www.artofliving.org",
+        "logo": "https://www.artofliving.org/sites/www.artofliving.org/files/images/logo/logo-2x-cropped.png",
+        "sameAs": [
+            "https://www.facebook.com/ArtofLiving/",
+            "https://twitter.com/artofliving",
+            "https://www.instagram.com/artofliving/",
+            "https://www.youtube.com/user/artoflivingsatsang"
+        ]
+    }
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/misc/jquery-extend-3.4.0.js?v=2.2.4"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/misc/jquery-html-prefilter-3.5.0-backport.js?v=2.2.4"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/jquery_update/replace/jquery.form/4/jquery.form.min.js?v=4.2.1"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.nyroModal/js/jquery.nyroModal.custom.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/misc/ajax.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/country_locator/js/country_locator.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/aol-zen/js/aol-custom-tabs.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/smart_search/smart_search_en.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/aol_leads/js/aol_leads.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.json/jquery.json-2.4.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/geo_search/js/universal_search_open.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/geo_search/js/api_geo_search.unity_ux.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.menu-aim/jquery.menu-aim.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.cycle/jquery.cycle2.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.cycle/jquery.cycle2.center.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/jquery.cycle/jquery.cycle2.swipe.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/field_slideshow/js/field_slideshow.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/underscore/underscore-min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/unity2/js/functions.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/u_argentina.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/body_component.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/aol_social/js/aol_social.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/most_popular_articles.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/addthis/add_this.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/multiscript/multiscript.js?rzkqhj"></script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+var most_popular_api = '<%_.mixin({    content_more: function(teaser) {      return teaser.substr(0, 60);    },  })%><div class="most_popular_article_row">                           <div class="most_popular_article_image">                <a href="/<%= Drupal.settings.pathPrefix %><%= path %>">                  <span class="display-desktop">                    <img class="display-desktop" data-icon="/sites/all/modules/lazyloader/loader/loader-8.gif" src="" width="120" height="80" alt="" title="">                  </span>                  <span class="display-mob">                    <img class="display-mob" data-echo="" data-icon="/sites/all/modules/lazyloader/loader/loader-8.gif" src="" width="520" height="330" alt="" title="" style="">                  </span>                </a>              </div>                        <div class="most_popular_article_details ">                              <span class="most_popular_article_parent">                  <a href="/<%= Drupal.settings.pathPrefix %><%= parent_path %>" class="theme_blue-text"><%= parent_name %></a>                </span>                            <span class="most_popular_article_head theme_blue-text-hover">                <a href="/<%= Drupal.settings.pathPrefix %><%= path %>"><%= _.content_more(teaser) %>...</a>              </span>                                        </div>            </div> '
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/tab_layout.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/form_component.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/form-defaults/jquery.form-defaults.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/clientside_validation/jquery-validate/jquery.validate.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/misc/progress.js?v=7.91"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/webform/js/webform.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/ctools/js/ajax-responder.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/select_or_other/select_or_other.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/sticky_column.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/unity2/owlcarousel/owl.carousel.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+var tid_color_theme = '{"1128":{"0":502348,"1":"theme_yellow","2":543513,"3":"theme_yellow","4":698364,"5":null,"6":698359,"7":null,"8":"\/node\/502348"},"138":{"0":null,"1":null,"2":543514,"3":"default","4":"\/node\/"},"209":{"0":null,"1":null,"2":543512,"3":"default","4":698363,"5":null,"6":698357,"7":null,"8":"\/node\/"},"210":{"0":502348,"1":"theme_yellow","2":543513,"3":"theme_yellow","4":698364,"5":null,"6":698359,"7":null,"8":"\/node\/502348"},"1374":{"0":698367,"1":null,"2":698360,"3":null,"4":"\/spirituality"},"1368":{"0":698366,"1":null,"2":698358,"3":null,"4":"\/lifestyle"},"1380":{"0":698370,"1":null,"2":698377,"3":null,"4":"\/relationships"},"1370":{"0":698365,"1":"default","2":698361,"3":null,"4":"\/sri-sri"},"146":{"0":698175,"1":"default","2":698180,"3":"default","4":"\/service-projects"},"164":{"0":698178,"1":"default","2":698180,"3":"default","4":"\/node\/698178"},"1377":{"0":698374,"1":null,"2":698358,"3":null,"4":"\/node\/698374"},"212":{"0":698371,"1":null,"2":698358,"3":null,"4":"\/ayurveda"},"1378":{"0":698373,"1":null,"2":698375,"3":null,"4":"\/recipes"},"1379":{"0":698372,"1":null,"2":698376,"3":null,"4":"\/success"},"207":{"0":null,"1":null,"2":698231,"3":"default","4":"\/node\/"}}'
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+var blog_promoted_project_donation = '<%_.mixin({content_more: function(test_content) {var test_content_length = test_content.length;if(test_content_length > 50){test_content = test_content.replace("Is this item a generic donate i link for the entire state:","");test_content = test_content.split("Project");test_content = test_content[0].split("Category:");}return test_content[0];}});%><%var public_donation = "orange";var sub_title = "";var donation_link = "";var image_link = "";if( typeof sm_field_project_state != "undefined" && sm_field_project_state == "All" && last_item != true){public_donation = "blue";}if ( typeof sm_field_is_public_donation != "undefined" && sm_field_is_public_donation[0] == "1" && last_item != false){    public_donation = "blue";}if ( typeof sm_field_project_donate_link != "undefined"){    donation_link = sm_field_project_donate_link[0];}if ( typeof sm_field_project_sub_title != "undefined"){sub_title = sm_field_project_sub_title[0];}if ( typeof image != "undefined"){image_link = image;}%>        <div class="project_donation_details  <%= public_donation %>">            <div class="project_donation_image">                <img src="<%= image_link %>" alt="">            </div>            <div class="project_donation_detail">                <div class="project_donation_title">                    <%= label %>                </div>                <div class="project_donation_sub_title">                   <%= sub_title %>                </div>                <% if(layout != "USA_project_donate"){%>                <div class="project_donation_descriptio">                    <%= _.content_more(teaser) %>                </div>                <%}%>                <% if(layout == "USA_project_donate"){%>                <div class="project_donation_url">                    <a href="<%= donation_link %>">Donate</a>                    <a href="<%= url %>">Learn More</a>                </div>                <%}%>            </div>            <% if(layout != "USA_project_donate"){%>            <div class="project_donation_url">                <a href="<%= donation_link %>">Donate</a>            </div>            <%}%>        </div>'
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/taxomony_tanslations.js?rzkqhj"></script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+var blog_promoted_api = '<% 	_.mixin({	  content_more: function(test_content) {	  	var test_content_length = test_content.length;	  	if(test_content_length > 50){    		var test_content_part = test_content.substr(0, 50);    		test_content_part = test_content_part.lastIndexOf(" ");    		test_content = test_content.slice(0, test_content_part);    	}	  		  	return test_content;	  }	});	%><%if(typeof sm_field_search_image != "undefined"){	if(img_width == 565)  	var new_image = image.replace("files/", "files/styles/blog_promoted_big/public/");	else  	var new_image = image.replace("files/", "files/styles/blog_promoted_3_box_grid/public/");}else if(typeof image != "undefined"){	if(img_width == 565)		var new_image = sm_field_search_image.replace("public://", "/sites/www.artofliving.org/files/styles/blog_promoted_big/public/");	else		var new_image = sm_field_search_image.replace("public://", "/sites/www.artofliving.org/files/styles/blog_promoted_3_box_grid/public/");    new_image = encodeURIComponent(new_image);}else{  new_image = "/sites/all/themes/landing-page/images/BoxImage.png";}new_image = new_image.replace(/unity.artofliving.org/g, "www.artofliving.org");%><%  if(layout == "featured" || layout == "overlay"){ %>    <div class="   item ">             <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="featured-promoted-img   ">                           <img data-echo="<%= new_image %>" data-icon="/sites/all/modules/lazyloader/loader/loader-8.gif" src="/sites/all/modules/lazyloader/image_placeholder.gif" width="520" height="330" alt="" title=""><noscript><img src="<%= new_image %>" width="520" height="330" alt="" title="" /></noscript></a>                                   <div class="promoted-main">                             <h3 class="promoted-title -text-hover"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>"><%= label %></a></h3>                                       </div>                             </div><% }else if(layout == "3_box_grid"){ %>    <div class="  bpa-three-box-grid  without-caro-item 3_box_grid">         <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img ">       <img loading="lazy" src="<%= new_image %>" width="370" height="235" alt="" title=""><noscript><img src="<%= new_image %>" width="370" height="235" alt="" title="" /></noscript></a>   <div class="promoted-main">             <span class="promoted-tag theme-common-bg promoted-link <%= (typeof color_theme != "undefined") ? color_theme+"-background" : "" %>"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %>node/<%= (typeof parent_path != "undefined" && parent_path != "") ? parent_path : "#" %>" class=""><%= (typeof parent_name != "undefined") ? parent_name : "" %></a></span><h3 class="promoted-title theme_yellow-text-hover"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>"><%= label %></a></h3>         <p class="promoted-desc"><%= _.content_more(teaser) %>...</p>                   </div> </div><% }else if(layout == "bigsmall"){ %>    <div class="  without-caro-item bigsmall">         <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img ">       <img data-icon="/sites/all/modules/lazyloader/loader/loader-8.gif" src="<%= new_image %>" width="565" height="280" alt="" title=""><noscript><img src="<%= new_image %>" width="565" height="280" alt="" title="" /></noscript></a>   <div class="promoted-main">             <span class="promoted-tag theme-common-bg promoted-link <%= (typeof color_theme != "undefined") ? color_theme+"-background" : "" %>" style="background-color: rgba(224, 186, 35, 0.9) !important;"><a href="/in-en/yoga" class=""><%= (typeof parent_name != "undefined") ? parent_name : "" %></a></span><h3 class="promoted-title theme_yellow-text-hover"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>"><%= label %></a></h3>         <p class="promoted-desc"><%= _.content_more(teaser) %>...</p>                   </div> </div><% }else if(layout == "circular_loop_left_side_title"){ %>    <div class="loop-with-left-title-child">      <input type="hidden" class="blog_nin_entity_id" value="<%= entity_id %>">  <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img">     <img src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>">  </a><div class="promoted-main">    <span class="promoted-tag theme-common-bg promoted-link <%= (typeof color_theme != "undefined") ? color_theme+"-background" : "" %>">      <a href="<%= (typeof parent_path != "undefined" && parent_path != "") ? parent_path : "" %>"><%= (typeof parent_name != "undefined") ? parent_name : "" %></a>    </span>    <h3 class="promoted-title <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class=" loop-with-left-title-anchor" data-key="<%= entity_id %>"><%= label %></a></h3>    <p class="promoted-desc"><%= _.content_more(teaser) %>...</p>  </div></div><% }else if(layout == "top_left_title_three_items"){ %>    <div class="top-left-title-three-items-childs">      <input type="hidden" class="blog_nin_entity_id" value="<%= entity_id %>">  <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img">     <img src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>">  </a><div class="promoted-main">    <span class="promoted-tag theme-common-bg promoted-link <%= (typeof color_theme != "undefined") ? color_theme+"-background" : "" %>">      <a href="<%= (typeof parent_path != "undefined" && parent_path != "") ? parent_path : "" %>"><%= (typeof parent_name != "undefined") ? parent_name : "" %></a>    </span>    <h3 class="promoted-title <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class=" loop-with-left-title-anchor" data-key="<%= entity_id %>"><%= label %></a></h3>  </div></div><% }else if(layout == "1_item_long_text_preview"){ %>    <div class="image-and-long-text-preview-childs blog_sub_cateogery">      <input type="hidden" class="blog_nin_entity_id" value="<%= entity_id %>">       <h1 class="promoted-title <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><%= label %></h1>    <div class="blog_sub_cateogery1 wrapo image-and-long-text-preview-image-parent"><img class="image-and-long-text-preview-image" src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>"></div>    <div class="blog_sub_cateogery2 wrapo">    <div class="blog_content"> <%= teaser.substr(0, 256) %>...</div><div class="blog_info_more">    <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="image-and-long-text-preview-read-more">         Read More      </a>    </div>    </div>    </div><% }else if(layout == "3_long_text_preview"){ %>      <div class="three-long-text-preview-childs">        <input type="hidden" class="blog_nin_entity_id" value="<%= entity_id %>">        <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" data-key="<%= entity_id %>">        <img class="three-long-text-preview-image" src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>"></a>        <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" data-key="<%= entity_id %>">        <h2 class=" <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><%= label %></h2></a>        <div class="three-long-text-preview-childs-tito">        <p class="three_image_slido_info"> <%= teaser.substr(0, 150) %>...</p>        </div>      </div><% }else if(layout == "6_box_scrolling_subcategories"){ %>    <div class="six-box-scrolling-subcategories">    <input type="hidden" class="blog_nin_entity_id" value="<%= entity_id %>">      <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img">         <picture>                <source srcset="<%= new_image %>.webp" type="image/webp">                <source srcset="<%= new_image %>">                <img loading="lazy" width="<%= img_width %>" height="<%= img_height %>" class="" srcset="" src="<%= new_image %>.webp">         </picture>                    </a>    <div class="promoted-main">        <span class="promoted-tag theme-common-bg promoted-link theme_green-background">          <a href="<%= (typeof parent_path != "undefined" && parent_path != "") ? parent_path : "" %>"><%= (typeof parent_name != "undefined") ? parent_name : "" %></a>        </span>        <h3 class="promoted-title <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class=" loop-with-left-title-anchor" data-key="<%= entity_id %>"><%= label %></a></h3>        <p class="promoted-desc"><%= _.content_more(teaser) %>...</p>      </div>    </div><% }else if(layout == "top_stories"){ %>  <div class="top-stories-main">      <div class=" top-stories-image">        <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img">          <img src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>">        </a>      </div>      <div class="top-stories-content">          <div class="top-stories-title">            <a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>"><%= label %></a>          </div>                    <div class="top-stories-description">              <span><%= _.content_more(teaser) %>...</span>          </div>      </div>  </div><% }else { %><div class="item without-caro-item">	<a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>" class="promoted-img">		 <img src="<%= new_image %>" width="<%= img_width %>" height="<%= img_height %>">	</a><div class="promoted-main">		<span class="promoted-tag theme-common-bg promoted-link <%= (typeof color_theme != "undefined") ? color_theme+"-background" : "" %>">			<a href="<%= (typeof parent_path != "undefined" && parent_path != "") ? parent_path : "" %>" class=""><%= (typeof parent_name != "undefined") ? parent_name : "" %></a>		</span>		<h3 class="promoted-title <%= (typeof color_theme != "undefined") ? color_theme+"-text-hover" : "" %>"><a href="https://www.artofliving.org/<%= Drupal.settings.pathPrefix %><%= path %>"><%= label %></a></h3>		<p class="promoted-desc"><%= _.content_more(teaser) %>...</p>	</div></div><% }%>'
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/picturefill/picturefill-background.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/libraries/picturefill/picturefill.min.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/header_component.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/misc/autocomplete.js?v=7.91"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/geo_search/js/jquery.mapbox.geocoder.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/aolf_custom/geo_search/js/geo_search.helpers.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/landing_pages/blog_promoted_articles_component.js?rzkqhj"></script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function () { jQuery("[type='css-postload']").attr("type", "text/css") });
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/clientside_validation/clientside_validation.ie8.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/modules/clientside_validation/clientside_validation.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/landing-page/js/script.js?rzkqhj"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/all/themes/unity2/js/jquery.sidr.min.js?rzkqhj"></script>
+<script type="js-postload">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"unity2","theme_token":"RxpYkDHqPw2Hsuxp_abdXybFX4orjNepHqmnOlfsClE","jquery_version":"2.2"},"aol":{"country_locator":{"country_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/countries_en.js","continent_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/selected_continent1.js","center_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/center_global.js","public_path":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator"},"country":"global","content_api":"https:\/\/unity.artofliving.org\/content","prefix":"","no_map":false,"language":"en","country_languages":[],"full_language":"en","real_country":"global","is_ashram":null,"country_name":"Global","show_all_centers":0,"course_path":"\/course-search\/ajax","date_separator":"-","show_year":1,"dont_show_courses_afr_starts":0,"current_result_limit":25,"replace_smart_search":1,"replace_universal_search":0,"mapbox_token":"pk.eyJ1IjoiYXJ0b2ZsaXZpbmciLCJhIjoiY2pzYmcwcHRrMGE2MjQ0bWx4amZrYWViaSJ9.NzokMCgsH55e1D7c8Lrrrg","use_mapbox_autocomplete":1,"order_centers_by_weight":false,"order_centers_by_title":false,"geolocation_default_city":0,"hide_centers_frm_smart_sea":0,"hide_center_frm_course_sea":1,"use_miles":0,"default_course_distance":10,"taxonomy":[971,"209"],"webform_setting_redirect_url":"\u003Cnone\u003E"},"socialitejs":{"loading":"page"},"landing_pages":{"url":"Yoga-Individual","node":1,"l_id":"0"},"ajax":{"edit-webform-ajax-submit-520019":{"callback":"webform_ajax_callback","wrapper":"webform-ajax-wrapper-520019","progress":{"message":"","type":"throbber"},"event":"click","url":"https:\/\/www.artofliving.org\/webform-post","submit":{"_triggering_element_name":"op","_triggering_element_value":"Subscribe "}}},"urlIsAjaxTrusted":{"https:\/\/www.artofliving.org\/webform-post":true},"clientsideValidation":{"forms":{"webform-client-form-520019":{"errorPlacement":"1","general":{"errorClass":"error","wrapper":"li","validateTabs":0,"scrollTo":1,"scrollSpeed":"1000","disableHtml5Validation":"1","validateOnBlur":"1","validateOnBlurAlways":"0","validateOnKeyUp":"1","validateBeforeAjax":"1","validateOnSubmit":"1","showMessages":"0","errorElement":"label"},"rules":{"submitted[name]":{"required":true,"messages":{"required":"first name cannot be empty.","maxlength":"first name field has a max length of 128 characters."},"maxlength":128},"submitted[email]":{"required":true,"messages":{"required":"email address cannot be empty.","email":"Email ID is not correct."},"email":true},"submitted[counties_without_eu]":{"required":true,"messages":{"required":"Country cannot be empty."}}},"checkboxrules":{"submitted[terms_of_use]":{"checkboxgroupminmax":[1,99,"#edit-submitted-terms-of-use"],"messages":{"checkboxgroupminmax":"Privacy Policy field is required."}}}}},"general":{"usexregxp":0,"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}},"groups":{"webform-client-form-520019":{}}}});
+//--><!]]>
+</script>
+  
+<script type="text/javascript">
+    if (!document.body.classList.contains("page-page")) {
+      var was = false;
+      if (document.querySelector(".nav >li > a[href='"+ window.location.pathname +"']") != null) {
+        // document.querySelector(".nav >li > a[href='"+ window.location.pathname +"']").parent().classList.add("mobile_menu_active menu_active");
+          var a = document.querySelectorAll(".nav >li > a[href='"+ window.location.pathname +"']");
+          
+          for(var i = 0; i < a.length; i++) {
+              a[i].parentNode.classList.add('mobile_menu_active');
+              a[i].parentNode.classList.add('menu_active');
+              was = true;
+          }
+      }
+      else if(document.querySelector(".nav a[href='"+ window.location.pathname +"']") != null) {
+        document.querySelector(".nav a[href='"+ window.location.pathname +"']").classList.add('active');
+          var a = document.querySelectorAll(".nav a[href='"+ window.location.pathname +"']");
+          for(var i = 0; i < a.length; i++) {
+              a[i].closest('.sub-menu').parentNode.classList.add('mobile_menu_active');
+              a[i].closest('.sub-menu').parentNode.classList.add('menu_active');
+              was = true;
+          }
+        // document.querySelector(".nav a[href='"+ window.location.pathname +"']")
+        // .closest('.sub-menu').parent().classList.add("mobile_menu_active menu_active");
+        document.querySelector("nav").classList.add("submenu-active");
+      } else if(typeof node_taxonomy != 'undefined'){
+        node_taxonomy.forEach(function(f) { 
+          if (null != document.querySelector("[data-tids*='" + f + "']")) {
+          	document.querySelector("[data-tids*='" + f + "']").classList.add("mobile_menu_active", "menu_active");
+          	was = true;
+          }
+        });
+      }
+      if (was) {
+      	document.querySelector("nav").classList.add("nav-bar-fixed");
+      }
+    }
+</script>
+</body>
+</html>
